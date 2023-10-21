@@ -1,0 +1,44 @@
+:root{
+    --warna-bg-primary: #5b9975;
+    --warna-bg-primary1: #ededed;
+    --warna-text-primary: #ffffff;
+    --color-text-primary: #000000;
+    --color-text-primary1: #ffffff;
+    --warna-bg: rgb(255, 255, 255);
+    --warna-bg-btn: #f39b3d;
+    --font-family: 'Poppins', sans-serif;
+    --font-family: 'Space Grotesk', sans-serif;
+    --font-family2: 'Stardos Stencil', cursive;
+    --font-family3: 'Brygada 1918', serif;
+}
+
+.bg-dilmil{
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--font-family3);
+    background-color: var(--warna-bg-primary);
+}
+.bg-dilmil1{
+    color: var(--color-text-primarye);
+    font-family: var(--font-family3);
+    background-color: var(--warna-bg-primary1);
+}
+
+.right-content{
+    display: flex;
+    flex: 25%;
+}
+
+.bg-btn{
+    color: var(--warna-text-primary);
+    background-color: var(--warna-bg-btn);
+}
+.bg-btn:hover{
+    color: var(--warna-text-primary);
+    background-color: var(--warna-bg-primary);
+}
+
+.card1{
+    font-family: var(--font-family3);
+    background-color: #5291aa;
+}
