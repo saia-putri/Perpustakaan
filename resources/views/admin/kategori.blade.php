@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    Home
+    KATEGORI
 @endsection
 @section('content')
 <section id="header" class="header">
@@ -8,34 +8,31 @@
 
 <section>
 <div class="container mb-5 mt-5">
-<div class="right-content">
+<div class="justify-content-end">
 <table class="table">
   <thead>
-  <a href="/createkategori" class="btn bg-btn mb-2">Tambahkan Artikel</a>
+  <a href="/createkategori" class="btn bg-btn mb-2">Tambahkan Kategori</a>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Judul Buku</th>
-      <th scope="col">Tahun Terbit</th>
-      <th scope="col">Pengarang</th>
+      <th scope="col">Kategori</th>
       <th scope="col">Ketersediaan</th>
+      <th scope="col">Jumlah</th>
       <th scope="col">Option</th>
     </tr>
   </thead>
   <tbody>
-    
+  @foreach ($kategoris as $Kategori)
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td width=""></td>
-      <td><img src="" width="15" alt=""></td>
-      <td><img src="" width="15" alt=""></td>
+      <th scope="row">{{ $loop->iteration }}</th>
+      <td>{{ $Kategori->kategori }}</td>
+      <td width="">{{ $Kategori->ketersediaan }}</td>
+      <td width="">{{ $Kategori->jumlah }}</td>
       <td>
-        <a href="/editkategori" class="btn bg-btn">edit</a>
-        <a href="/deletekategori" class="btn bg-btn">delete</a>
-        <a href="/detailkategori" class="btn bg-btn">detail</a>
+        <a href="/editkategori/{{ $Kategori->id }}" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
+        <a href="/deletekategori/{{ $Kategori->id }}" class="btn bg-btn"><i class="bi bi-trash"></i></a>
       </td>
     </tr>
-    
+  @endforeach
   </tbody>
 </table>
 </div>

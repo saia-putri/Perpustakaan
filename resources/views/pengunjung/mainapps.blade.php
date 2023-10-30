@@ -24,44 +24,43 @@
   </head>
   <body>
 
-  <nav class="navbar bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+<nav class="navbar bg-body-tertiary fixed-top pengunjung">
+  <div class="container-fluid pengunjung1">
+    <button class="navbar-toggler bg-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h3 class="offcanvas-title mt-3" id="offcanvasNavbarLabel">Menu</h3><hr>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      
+      <div class="offcanvas-body menu1">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="/main">Beranda Depan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/info">Info Perpustakaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/lokasi">Lokasi Perpustakaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/anggota">Area Anggota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/pustakawan">Pustakawan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Masuk Pustakawan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
+      
     </div>
   </div>
 </nav>
@@ -70,24 +69,17 @@
     @yield('content')
 
     <!-- ini footer -->
-    <div class="">
-  <footer class="d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
-
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+  <footer class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
+    <p class="mb-0 px-3 text-white">&copy; 2023 Company, Inc</p>
+    <ul class="nav col-md-6 justify-content-end">
+      <li class="nav-item"><a href="/main" class="nav-link px-2 ">Beranda Depan</a></li>
+      <li class="nav-item"><a href="https://wa.me/6281234788104" class="nav-link px-2 text-white">WhatsApp</a></li>
+      <li class="nav-item"><a href="https://www.facebook.com/pengadilanmiliter.palembang" class="nav-link px-2 text-white">Facebook</a></li>
+      <li class="nav-item"><a href="https://www.instagram.com/dilmil_palembang/" class="nav-link px-2 text-white">Instagram</a></li>
+      <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang" class="nav-link px-2 text-white">Youtube</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-3 text-white">About</a></li>
     </ul>
   </footer>
-</div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

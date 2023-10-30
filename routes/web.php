@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Bukucontroller;
+use App\Http\Controllers\Kategoricontroller;
+use App\Http\Controllers\Rakcontroller;
+use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\Pengunjungcontroller;
+use App\Http\Controllers\Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,53 +21,46 @@ use Illuminate\Support\Facades\Route;
 */
 
 // admin
-Route::get('/', function () {
+Route::get('/berandaadmin', function () {
     return view('admin.index');
 });
+// BUKU
+Route::get('/buku', [Bukucontroller::class, 'index']);
+Route::get('/createbuku', [Bukucontroller::class, 'create']);
+Route::post('/savebuku', [Bukucontroller::class, 'store']);
+Route::get('/editbuku/{id}', [Bukucontroller::class, 'edit']);
+Route::put('/updatebuku/{id}', [Bukucontroller::class, 'update']);
+Route::get('/deletebuku/{id}', [Bukucontroller::class, 'destroy']);
 
-Route::get('/buku', function () {
-    return view('admin.buku');
-});
+// KATEGORI
+Route::get('/kategori', [Kategoricontroller::class, 'index']);
+Route::get('/createkategori', [Kategoricontroller::class, 'create']);
+Route::post('/savekategori', [Kategoricontroller::class, 'store']);
+Route::get('/editkategori/{id}', [Kategoricontroller::class, 'edit']);
+Route::put('/updatekategori/{id}', [Kategoricontroller::class, 'update']);
+Route::get('/deletekategori/{id}', [Kategoricontroller::class, 'destroy']);
 
-Route::get('/user', function () {
-    return view('admin.user');
-});
+// RAK
+Route::get('/rak', [Rakcontroller::class, 'index']);
+Route::get('/createrak', [Rakcontroller::class, 'create']);
+Route::post('/saverak', [Rakcontroller::class, 'store']);
+Route::get('/editrak/{id}', [Rakcontroller::class, 'edit']);
+Route::put('/updaterak/{id}', [Rakcontroller::class, 'update']);
+Route::get('/deleterak/{id}', [Rakcontroller::class, 'destroy']);
 
-Route::get('/kategori', function () {
-    return view('admin.kategori');
-});
-
-Route::get('/rak', function () {
-    return view('admin.rak');
-});
-
-
-Route::get('/createbuku', function () {
-    return view('admin.createbuku');
-});
-
-Route::get('/editbuku', function () {
-    return view('admin.editbuku');
-});
-
-Route::get('/detailbuku', function () {
-    return view('admin.detailbuku');
-});
+// USER
+Route::get('/user', [Usercontroller::class, 'index']);
+Route::get('/deleteuser/{id}', [Usercontroller::class, 'destroy']);
 
 
-Route::get('/createkategori', function () {
-    return view('admin.createkategori');
-});
-
-Route::get('/editkategori', function () {
-    return view('admin.editkategori');
-});
-
-Route::get('/detailkategori', function () {
-    return view('admin.detailkategori');
-});
 
 // pengunjung
-Route::get('/main', function () {
-    return view('pengunjung.mainapps');
-});
+Route::get('/main', [Pengunjungcontroller::class, 'index']);
+Route::get('/warta', [Pengunjungcontroller::class, 'warta']);
+Route::get('/info', [Pengunjungcontroller::class, 'info']);
+Route::get('/lokasi', [Pengunjungcontroller::class, 'lokasi']);
+Route::get('/anggota', [Pengunjungcontroller::class, 'anggota']);
+Route::get('/pustakawan', [Pengunjungcontroller::class, 'pustakawan']);
+
+
+Route::get('/search', [Pengunjungcontroller::class, 'search']);

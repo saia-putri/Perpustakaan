@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    Create
+    Create Buku
 @endsection
 @section('content')
 <section id="blog">
@@ -9,22 +9,54 @@
 <div class="card">
     <div class="card-body">      
     <form action="/savebuku" method="post" enctype="multipart/form-data">
-        @csrf
-        <div class="mb-3">
-            <label for="judul_buku" class="form-label">Judul Buku</label>
-            <input type="text" class="form-control" id="judul_buku" name="judul_buku" placeholder="judul buku">
-        </div>
-        <div class="mb-3">
-            <label for="isi_buku" class="form-label">Isi buku</label>
-            <textarea class="form-control" name="isi_buku" id="isi_buku" cols="30" rows="5" placeholder="isi buku"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="gambar_buku" class="form-label">Gambar Buku</label>
-            <input type="file" class="form-control" id="gambar_buku" name="gambar_buku" accept="image/*">
-        </div>
-        <div class="text-end">
-            <button type="submit" class="btn bg-btn">post</button>
-        </div>
+    @csrf
+            <div class="mb-3">
+                <label for="kategori" class="form-label">Kategori Buku</label>
+                <input type="hidden" class="form-control" id="kategori" name="kategori_buku" value="{{ $buku->kategori }}">
+                <input type="text" class="form-control" id="kategori"
+                value="{{ $buku->Kategori }}" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="judul" class="form-label">Judul Buku</label>
+                <input type="text" class="form-control" id="judul" name="judul_buku"
+                value="">
+            </div>
+            <div class="mb-3">
+                <label for="pengarang_buku" class="form-label">Pengarang Buku</label>
+                <input type="text" class="form-control" id="pengarang" name="pengarang_buku"
+                value="">
+            </div>
+            <div class="mb-3">
+                <label for="penerbit_buku" class="form-label">Penerbit Buku</label>
+                <input type="text" class="form-control" id="penerbit" name="penerbit_buku"
+                value="">">
+            </div>
+            <div class="mb-3">
+                <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
+                <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit"
+                value="">
+            </div>
+            <div class="mb-3">
+                <label for="gambar_buku" class="form-label">Gambar Buku</label>
+                <input type="file" class="form-control" id="gambar" name="gambar_buku" accept="image/*">
+                <input type="hidden" name="oldImage" value="">
+                <img src="" alt="" width="20%" class="img-thumbhnail mt-3" width="30%" alt="Foto">
+            </div>
+            <div class="mb-3">
+                <label for="jumlah_buku" class="form-label">Jumlah Buku</label>
+                <input type="text" class="form-control" id="jumlah" name="jumlah_buku"
+                value="">
+            </div>
+            <div class="mb-3">
+                <label for="letak_buku" class="form-label">Letak Buku</label>
+                <input type="hidden" class="form-control" id="letak" name="letak_buku"
+                value="{{ $bukus->id }}">
+                <input type="text" class="form-control" id="letak"
+                value="{{ $raks->Rak }}" disabled>
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn bg-btn">post</button>
+            </div>
     </form>
     </div>
 </div>

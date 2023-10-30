@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    Create
+    Create Kategori
 @endsection
 @section('content')
 <section id="blog">
@@ -11,16 +11,16 @@
     <form action="/savekategori" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-            <label for="judul_buku" class="form-label">kategori Buku</label>
-            <input type="text" class="form-control" id="kategori_buku" name="kategori_buku" placeholder="kategori buku">
+            <label for="kategori" class="form-label">kategori Buku</label>
+            <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori">
         </div>
         <div class="mb-3">
-            <label for="isi_buku" class="form-label">Isi kategori</label>
-            <textarea class="form-control" name="isi_buku" id="isi_kategori" cols="30" rows="5" placeholder="isi kategori"></textarea>
+            <label for="ketersediaan" class="form-label">Ketersediaan</label>
+            <textarea class="form-control" name="ketersediaan" id="ketersediaan" cols="" rows="" placeholder="ketersediaan"></textarea>
         </div>
         <div class="mb-3">
-            <label for="gambar_buku" class="form-label">Gambar Buku</label>
-            <input type="file" class="form-control" id="gambar_buku" name="gambar_buku" accept="image/*">
+            <label for="jumlah" class="form-label">Jumlah Buku</label>
+            <input type="text" class="form-control" id="jumlah" name="jumlah" value="">
         </div>
         <div class="text-end">
             <button type="submit" class="btn bg-btn">post</button>

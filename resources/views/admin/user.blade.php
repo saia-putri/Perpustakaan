@@ -1,5 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
+    USER
 @endsection
 @section('content')
 <section id="blog">
@@ -13,22 +14,24 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Jabatan</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Gambar</th>
                     <th scope="col">Option</th>
                 </tr>
             </thead>
             <tbody>
                 
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a href="" class="btn bg-btn">edit</a>
-                            <a href="" class="btn bg-btn">delete</a>
-                            <a href="" class="btn bg-btn">detail</a>
-                        </td>
-                    </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="" width="155" alt=""></td>
+                    <td>
+                        <a href="" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
+                        <a href="" class="btn bg-btn"><i class="bi bi-trash"></i></a>
+                        <a href="" class="btn bg-btn"><i class="bi bi-eye"></i></a>
+                    </td>
+                </tr>
                 
             </tbody>
         </table>

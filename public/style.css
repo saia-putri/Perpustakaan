@@ -1,44 +1,89 @@
 :root{
-    --warna-bg-primary: #5b9975;
+    --warna-bg-primary: #547f67;
     --warna-bg-primary1: #ededed;
     --warna-text-primary: #ffffff;
     --color-text-primary: #000000;
     --color-text-primary1: #ffffff;
     --warna-bg: rgb(255, 255, 255);
-    --warna-bg-btn: #f39b3d;
+    --warna-bg-btn: #FFD700;
+    --warna-bg-btn1: #ffffff;
     --font-family: 'Poppins', sans-serif;
     --font-family: 'Space Grotesk', sans-serif;
     --font-family2: 'Stardos Stencil', cursive;
     --font-family3: 'Brygada 1918', serif;
 }
 
-.bg-dilmil{
-    font-weight: bold;
-    text-align: center;
-    font-family: var(--font-family3);
-    background-color: var(--warna-bg-primary);
-}
+/* ADMIN */
 .bg-dilmil1{
     color: var(--color-text-primarye);
     font-family: var(--font-family3);
     background-color: var(--warna-bg-primary1);
 }
 
-.right-content{
-    display: flex;
-    flex: 25%;
+.admin{
+    font-family: var(--font-family);
+    font-size: 25px;
 }
-
+#Pencarian{
+    background-image: url(img/perpus.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
 .bg-btn{
     color: var(--warna-text-primary);
-    background-color: var(--warna-bg-btn);
+    background-color: var(--warna-bg-primary);
 }
 .bg-btn:hover{
     color: var(--warna-text-primary);
-    background-color: var(--warna-bg-primary);
+    background-color: var(--warna-bg-btn);
 }
 
 .card1{
     font-family: var(--font-family3);
     background-color: #5291aa;
+}
+
+/* PENGUNJUNG */
+.pengunjung{
+    background: rgba(0,0,0, 0.5);
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pengunjung1{
+    opacity: 0px;
+}
+.bg-dilmil{
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--font-family3);
+    background-color: var(--warna-bg-primary);
+}
+.pencarian{
+    color: var(--color-text-primary1);
+    margin-top: 180px;
+    margin-left: 30%;
+    text-align: center;
+}
+.form2{
+    height: 50px;
+    width: 420px;
+    border-radius: 20px;
+}
+.form3{
+    height: 50px;
+    width: 50px;
+    border-radius: 14px;
+}
+.info{
+    font-family: var(--font-family3);
+    text-align: justify;
+    margin-left: 55px;
+}
+.menu1{
+    color: #ffffff;
+}
+.menu1 a:hover{
+    color: #000000;
 }
