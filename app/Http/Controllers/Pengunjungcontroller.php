@@ -69,7 +69,7 @@ class Pengunjungcontroller extends Controller
             $kategoris = Kategori::all();
             $raks = Rak::all();
         }
-        return view ('pengunjung.index', ['Buku' => $bukus], ['Kategori' => $kategoris], ['Rak', => $raks]);
+        return view ('pengunjung.index');
     }
 
 

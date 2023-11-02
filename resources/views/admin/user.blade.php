@@ -8,7 +8,7 @@
 
         <table class="table">
             <thead>
-                <a href="" class="btn bg-btn mb-2">Tambahkan User</a>
+                <a href="/createuser" class="btn bg-btn mb-2">Tambahkan User</a>
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
@@ -19,20 +19,22 @@
                 </tr>
             </thead>
             <tbody>
-                
+            @foreach ($users as $User)
                 <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <td>{{ $User->name }}</td>
+                    <td>{{ $User->email }}</td>
+                    <td>{{ $User->password }}</td>
+                    <td>{{ $User->jabatan }}</td>
+                    <td><img src="{{ asset('storage/' .$User->gambar) }}" width="" alt=""></td>
                     <td><img src="" width="155" alt=""></td>
                     <td>
-                        <a href="" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
-                        <a href="" class="btn bg-btn"><i class="bi bi-trash"></i></a>
-                        <a href="" class="btn bg-btn"><i class="bi bi-eye"></i></a>
+                        <a href="/edituser" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
+                        <a href="/deleteuser" class="btn bg-btn"><i class="bi bi-trash"></i></a>
+                        <a href="/detailuser" class="btn bg-btn"><i class="bi bi-eye"></i></a>
                     </td>
                 </tr>
-                
+            @endforeach
             </tbody>
         </table>
 

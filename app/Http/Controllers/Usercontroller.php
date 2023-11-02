@@ -19,7 +19,7 @@ class Usercontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.createuser');
     }
 
     /**
@@ -27,7 +27,27 @@ class Usercontroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'gambar' => 'mimes:png,jpg,gif|image|max:5048',
+                'jabatan' => 'required',
+            ]
+        );
+
+        $file = $request->file('gambar');
+        $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
+
+        $users = new User;
+        $users->name = $request['name'];
+        $users->email = $request['email'];
+        $users->password = $request['password'];
+        $users->jabatan = $request['jabatan'];
+        $users->gambar = $path;
+        $users->save();
+
+        return redirect('/user');
     }
 
     /**
@@ -43,7 +63,8 @@ class Usercontroller extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $User = User::find($id);
+        return view('pengunjung.edituser', compact('User'));
     }
 
     /**
@@ -51,7 +72,33 @@ class Usercontroller extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate(
+            [
+                'gambar' => 'mimes:png,jpg,gif|image|max:5048',
+            ]
+        );
+
+        if($request->file('gambar'))
+        {
+            if($request->oldImage) {
+                storage::delete($request->oldImage);
+            }
+            $file = $request->file('gambar');
+            $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
+        }
+        else {
+            $path = $request->oldImage;
+        }
+
+        $users = new User;
+        $users->name = $request['name'];
+        $users->email = $request['email'];
+        $users->password = $request['password'];
+        $users->jabatan = $request['jabatan'];
+        $users->gambar = $path;
+        $users->save();
+
+        return redirect('/user');
     }
 
     /**

@@ -50,6 +50,10 @@ Route::get('/deleterak/{id}', [Rakcontroller::class, 'destroy']);
 
 // USER
 Route::get('/user', [Usercontroller::class, 'index']);
+Route::get('/createuser', [Usercontroller::class, 'create']);
+Route::post('/saveuser', [Usercontroller::class, 'store']);
+Route::get('/edituser', [Usercontroller::class, 'edit']);
+Route::put('/updateuser', [Usercontroller::class, 'update']);
 Route::get('/deleteuser/{id}', [Usercontroller::class, 'destroy']);
 
 

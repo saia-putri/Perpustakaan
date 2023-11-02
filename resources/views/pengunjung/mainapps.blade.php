@@ -11,6 +11,9 @@
     <!-- css local -->
     <link rel="stylesheet" href="{{ asset('/') }}style.css">
 
+    <!-- Link Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <!-- link icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 

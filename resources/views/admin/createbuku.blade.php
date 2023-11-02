@@ -12,9 +12,9 @@
     @csrf
             <div class="mb-3">
                 <label for="kategori" class="form-label">Kategori Buku</label>
-                <input type="hidden" class="form-control" id="kategori" name="kategori_buku" value="{{ $buku->kategori }}">
+                <input type="hidden" class="form-control" id="kategori" name="kategori_buku" value="{{ $bukus->kategori }}">
                 <input type="text" class="form-control" id="kategori"
-                value="{{ $buku->Kategori }}" disabled>
+                value="{{ $bukus->Kategori }}" disabled>
             </div>
             <div class="mb-3">
                 <label for="judul" class="form-label">Judul Buku</label>

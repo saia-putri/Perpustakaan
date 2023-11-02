@@ -23,9 +23,9 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
-        $buku = Kategori::all();
+        $bukus = Kategori::all();
         $raks = Rak::all();
-        return view('admin.createbuku', compact('buku', 'raks'));
+        return view('admin.createbuku', compact('bukus', 'raks'));
     }
 
     /**

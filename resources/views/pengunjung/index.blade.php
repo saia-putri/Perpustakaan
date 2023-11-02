@@ -38,8 +38,33 @@
                 aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
-        <div class="carousel-inner">
+
+    <div class="row">
+    <div class="carousel-inner">
+
+        <div class="col">
+            <div class="carousel-item active">
+                <img src="/img/buku (1).jpg" alt="" width="10%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="carousel-item">
+                <img src="/img/buku (2).jpg" alt="" width="10%">
+            </div>
+        </div>
+        <div class="col">
+            <div class="carousel-item">
+                <img src="/img/buku (3).jpg" alt="" width="10%">
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+        <!-- <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/img/buku (1).jpg" alt="" width="10%">
             </div>
@@ -59,7 +84,7 @@
             <div class="carousel-item">
                 <img src="/img/buku (5).jpg" alt="" width="10%">
             </div>
-        </div>
+        </div> -->
 
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -72,6 +97,7 @@
     </div>
     </div>
     <!-- . -->
+
     </div>
     </div>
 </section>
