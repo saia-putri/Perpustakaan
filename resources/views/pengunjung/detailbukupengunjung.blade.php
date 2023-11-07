@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    PUSTAKAWAN
+    DETAIL BUKU
 @endsection
 @section('content')
 <!-- HEADER -->
@@ -25,21 +25,44 @@
 
 <!--  -->
 <section id="header" class="header">
-<div class="container py-5">
+<div class="container py-5 blogbook">
   <div class="row">
   
-  <div class="card mb-3" style="max-width: 750px;">
+  <div class="card" style="max-width: 800px;">
   <div class="row g-0">
-    <div class="col-2">
-      <img src="/img/user.jpeg" class="img-fluid rounded-start" alt="...">
+    <div class="col-md-4">
+      <img src="/img/buku (3).jpg" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-8">
+        <div class="judul">
+            <h5 class="card-header">Detail Cantuman</h5>
+        </div>
       <div class="card-body">
-        <h5 class="card-title">Profil Pustakawan</h5>
         <p class="card-text">
-          Nama : Alexander Sepriyanto Sihotang, S.E
+            Judul Buku : <br>
         </p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <p class="card-text">
+            Kategori Buku : <br>
+        </p>
+        <p class="card-text">
+            Pengarang Buku : <br>
+        </p>
+        <p class="card-text">
+            Penerbit Buku : <br>
+        </p>
+        <p class="card-text">
+            Ketersediaan Buku : <br>
+        </p>
+        <p class="card-text">
+            Tahun Terbit : <br>
+        </p>
+        <p class="card-text">
+            Jumlah Buku : <br>
+        </p>
+        <p class="card-text">
+            Letak Buku : <br>
+        </p>
+        <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04 Palembang</small></p>
       </div>
     </div>
   </div>

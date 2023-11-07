@@ -24,6 +24,9 @@ use App\Http\Controllers\Controller;
 Route::get('/berandaadmin', function () {
     return view('admin.index');
 });
+Route::get('/detailbuku', function () {
+    return view('admin.detailbuku');
+});
 // BUKU
 Route::get('/buku', [Bukucontroller::class, 'index']);
 Route::get('/createbuku', [Bukucontroller::class, 'create']);
@@ -52,13 +55,15 @@ Route::get('/deleterak/{id}', [Rakcontroller::class, 'destroy']);
 Route::get('/user', [Usercontroller::class, 'index']);
 Route::get('/createuser', [Usercontroller::class, 'create']);
 Route::post('/saveuser', [Usercontroller::class, 'store']);
-Route::get('/edituser', [Usercontroller::class, 'edit']);
-Route::put('/updateuser', [Usercontroller::class, 'update']);
+Route::get('/edituser/{id}', [Usercontroller::class, 'edit']);
+Route::put('/updateuser/{id}', [Usercontroller::class, 'update']);
 Route::get('/deleteuser/{id}', [Usercontroller::class, 'destroy']);
 
 
-
 // pengunjung
+Route::get('/detailbukupengunjung', function () {
+    return view('pengunjung.detailbukupengunjung');
+});
 Route::get('/main', [Pengunjungcontroller::class, 'index']);
 Route::get('/warta', [Pengunjungcontroller::class, 'warta']);
 Route::get('/info', [Pengunjungcontroller::class, 'info']);

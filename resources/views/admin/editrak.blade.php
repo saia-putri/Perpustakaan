@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    EDIT KATEGORI
+    EDIT RAK
 @endsection
 @section('content')
 <section id="blog">

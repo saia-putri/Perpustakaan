@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Buku;
-use App\Models\Kategori;
+use App\Models\User;
 use App\Models\Rak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -23,7 +23,7 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
-        $bukus = Kategori::all();
+        $bukus = User::all();
         $raks = Rak::all();
         return view('admin.createbuku', compact('bukus', 'raks'));
     }
@@ -42,7 +42,7 @@ class Bukucontroller extends Controller
                 'penerbit' => 'required',
                 'tahun_terbit' => 'required',
                 'jumlah' => 'required',
-                'letak' => 'required',
+                'rak' => 'required',
             ]
         );
 

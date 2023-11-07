@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class Usercontroller extends Controller
 {
@@ -11,7 +12,8 @@ class Usercontroller extends Controller
      */
     public function index()
     {
-        return view('admin.user');
+        $users = User::all();
+        return view('admin.user', compact('users'));
     }
 
     /**
@@ -30,9 +32,10 @@ class Usercontroller extends Controller
         $request->validate(
             [
                 'name' => 'required',
-                'email' => 'required',
-                'gambar' => 'mimes:png,jpg,gif|image|max:5048',
                 'jabatan' => 'required',
+                'email' => 'required|unique:users,email',
+                'password' => 'required',
+                'gambar' => 'mimes:png,jpg,jpeg,gif|image|max:2048',
             ]
         );
 
@@ -42,7 +45,7 @@ class Usercontroller extends Controller
         $users = new User;
         $users->name = $request['name'];
         $users->email = $request['email'];
-        $users->password = $request['password'];
+        $users->password = Hash::make($request['password']);
         $users->jabatan = $request['jabatan'];
         $users->gambar = $path;
         $users->save();
@@ -64,7 +67,7 @@ class Usercontroller extends Controller
     public function edit(string $id)
     {
         $User = User::find($id);
-        return view('pengunjung.edituser', compact('User'));
+        return view('admin.edituser', compact('User'));
     }
 
     /**
@@ -74,7 +77,11 @@ class Usercontroller extends Controller
     {
         $request->validate(
             [
-                'gambar' => 'mimes:png,jpg,gif|image|max:5048',
+                'name' => 'required',
+                'jabatan' => 'required',
+                'email' => 'required|unique:users,email',
+                'password' => 'required',
+                'gambar' => 'mimes:png,jpg,jpeg,gif|image|max:2048',
             ]
         );
 
@@ -90,10 +97,10 @@ class Usercontroller extends Controller
             $path = $request->oldImage;
         }
 
-        $users = new User;
+        $users = User::find($id);
         $users->name = $request['name'];
         $users->email = $request['email'];
-        $users->password = $request['password'];
+        $users->password = Hash::make($request['password']);
         $users->jabatan = $request['jabatan'];
         $users->gambar = $path;
         $users->save();

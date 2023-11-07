@@ -26,9 +26,8 @@
 
   </head>
   <body>
-
 <nav class="navbar bg-body-tertiary fixed-top pengunjung">
-  <div class="container-fluid pengunjung1">
+  <div class="container-fluid justify-content-end pengunjung1 bg-dilmil2">
     <button class="navbar-toggler bg-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,9 +56,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#">Masuk Pustakawan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
       </div>

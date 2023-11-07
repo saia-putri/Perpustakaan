@@ -14,6 +14,7 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Jabatan</th>
                     <th scope="col">Email</th>
+                    {{-- <th scope="col">Password</th> --}}
                     <th scope="col">Gambar</th>
                     <th scope="col">Option</th>
                 </tr>
@@ -23,14 +24,13 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $User->name }}</td>
-                    <td>{{ $User->email }}</td>
-                    <td>{{ $User->password }}</td>
                     <td>{{ $User->jabatan }}</td>
-                    <td><img src="{{ asset('storage/' .$User->gambar) }}" width="" alt=""></td>
-                    <td><img src="" width="155" alt=""></td>
+                    <td>{{ $User->email }}</td>
+                    {{-- <td>{{ $User->password }}</td> --}}
+                    <td><img src="{{ asset('storage/' .$User->gambar) }}" width="50px" alt=""></td>
                     <td>
-                        <a href="/edituser" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
-                        <a href="/deleteuser" class="btn bg-btn"><i class="bi bi-trash"></i></a>
+                        <a href="/edituser/{{ $User->id }}" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
+                        <a href="/deleteuser/{{ $User->id }}" class="btn bg-btn"><i class="bi bi-trash"></i></a>
                         <a href="/detailuser" class="btn bg-btn"><i class="bi bi-eye"></i></a>
                     </td>
                 </tr>
