@@ -13,7 +13,7 @@ class Rakcontroller extends Controller
     public function index()
     {
         $raks = Rak::all();
-        return view('admin.rak', compact('raks'));
+        return view('admin.rak.rak', compact('raks'));
     }
 
     /**
@@ -21,7 +21,7 @@ class Rakcontroller extends Controller
      */
     public function create()
     {
-        return view('admin.createrak');
+        return view('admin.rak.createrak');
     }
 
     /**
@@ -58,7 +58,7 @@ class Rakcontroller extends Controller
     public function edit(string $id)
     {
         $Rak = Rak::find($id);
-        return view('admin.editrak', compact('Rak'));
+        return view('admin.rak.editrak', compact('Rak'));
     }
 
     /**

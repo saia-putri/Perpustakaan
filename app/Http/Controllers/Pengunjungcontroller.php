@@ -57,6 +57,14 @@ class Pengunjungcontroller extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function masuk()
+    {
+        return view ('pengunjung.masuk');
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
     public function search(Request $request)
     {
         if($request->has(search)){

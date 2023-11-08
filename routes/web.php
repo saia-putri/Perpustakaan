@@ -70,6 +70,7 @@ Route::get('/info', [Pengunjungcontroller::class, 'info']);
 Route::get('/lokasi', [Pengunjungcontroller::class, 'lokasi']);
 Route::get('/anggota', [Pengunjungcontroller::class, 'anggota']);
 Route::get('/pustakawan', [Pengunjungcontroller::class, 'pustakawan']);
+Route::get('/masuk', [Pengunjungcontroller::class, 'masuk']);
 
 
 Route::get('/search', [Pengunjungcontroller::class, 'search']);
