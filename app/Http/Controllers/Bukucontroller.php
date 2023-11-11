@@ -87,7 +87,14 @@ class Bukucontroller extends Controller
     {
         $request->validate(
             [
+                'kategori' => 'required',
+                'judul' => 'required',
                 'gambar' => 'mimes:png,jpg,gif|image|max:5048',
+                'pengarang' => 'required',
+                'penerbit' => 'required',
+                'tahun_terbit' => 'required',
+                'jumlah' => 'required',
+                'rak' => 'required',
             ]
         );
 
@@ -103,6 +110,7 @@ class Bukucontroller extends Controller
             $path = $request->oldImage;
         }
 
+        $bukus = Buku::find($id);
         $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];

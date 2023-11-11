@@ -135,3 +135,60 @@
     width: 350px;
     font-family: var(--font-family3);
 }
+/* slide */
+@keyframes slider{
+    0%{
+        left: 0%;
+    }
+    20%{
+        left: 0%;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+#slider{
+    overflow: hidden;
+}
+#slider figure{
+    position: relative;
+    width: 50%;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    animation: 5s slider infinite;
+    
+}
+#slider figure img{
+    width: 50%;
+    float: left;
+    margin-left: 25px;
+}
+.katalog img{
+    width: 100%;
+}
+.katalog {
+    text-align: center;
+}
+.katalogbuku{
+    margin-bottom: 30px;
+    font-family: var(--font-family3);
+}

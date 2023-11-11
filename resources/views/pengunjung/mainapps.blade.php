@@ -86,7 +86,6 @@
                     class="nav-link px-2 text-white">Instagram</a></li>
             <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang"
                     class="nav-link px-2 text-white">Youtube</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-3 text-white">About</a></li>
         </ul>
     </footer>
 

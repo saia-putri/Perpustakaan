@@ -32,10 +32,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar</label>
-                            <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*"
-                                value="{{ $User->gambar }}">
-                            <img src="{{ asset('storage/' . $User->gambar) }}" class="img-thumbhnail mt-3" alt=""
-                                width="30%" alt="Foto">
+                            <input type="file" class="form-control @error('gambar') is-invalid @enderror" id="gambar"
+                                name="gambar" accept="image/*">
+                            <input type="hidden" name="oldImage" value="{{ $User->gambar }}">
+                            <img src="{{ asset('storage/' . $User->gambar) }}" class="img-thumbhnail mt-3" width="30%"
+                                alt="Foto">
                             <div class="invalid-feedback">
                                 @error('gambar')
                                     {{ $message }}

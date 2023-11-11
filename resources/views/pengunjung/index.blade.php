@@ -33,7 +33,7 @@
                 </form>
 
                 <!-- BUKUU -->
-                <div id="carouselExampleIndicators" class="carousel slide">
+                {{-- <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="row row-cols-1 row-cols-md-6 g-8 book">
 
                         <div class="carousel-indicators">
@@ -76,9 +76,20 @@
                             </button>
 
                         </div>
+                    </div> --}}
+                {{--  --}}
+                <div class="container py-5">
+                    <div id="slider">
+                        <figure>
+                            <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
+                            <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
+                            <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
+                            <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
+                        </figure>
                     </div>
-                    <!--  -->
                 </div>
+
             </div>
+        </div>
     </section>
 @endsection
