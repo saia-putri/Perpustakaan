@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    RAK
+    Rak
 @endsection
 @section('content')
 <section id="header" class="header">

@@ -1,43 +1,41 @@
 @extends('admin.mainapps')
 @section('title')
-    USER
+    User
 @endsection
 @section('content')
-<section id="blog">
-    <div class="container mb-5 mt-5">
+    <section id="blog">
+        <div class="container mb-5 mt-5">
 
-        <table class="table">
-            <thead>
-                <a href="/createuser" class="btn bg-btn mb-2">Tambahkan User</a>
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jabatan</th>
-                    <th scope="col">Email</th>
-                    {{-- <th scope="col">Password</th> --}}
-                    <th scope="col">Gambar</th>
-                    <th scope="col">Option</th>
-                </tr>
-            </thead>
-            <tbody>
-            @foreach ($users as $User)
-                <tr>
-                    <th scope="row">{{ $loop->iteration }}</th>
-                    <td>{{ $User->name }}</td>
-                    <td>{{ $User->jabatan }}</td>
-                    <td>{{ $User->email }}</td>
-                    {{-- <td>{{ $User->password }}</td> --}}
-                    <td><img src="{{ asset('storage/' .$User->gambar) }}" width="50px" alt=""></td>
-                    <td>
-                        <a href="/edituser/{{ $User->id }}" class="btn bg-btn"><i class="bi bi-pencil-square"></i></a>
-                        <a href="/deleteuser/{{ $User->id }}" class="btn bg-btn"><i class="bi bi-trash"></i></a>
-                        <a href="/detailuser" class="btn bg-btn"><i class="bi bi-eye"></i></a>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+            <table class="table">
+                <thead>
+                    <a href="/createuser" class="btn bg-btn mb-2">Tambahkan User</a>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Jabatan</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gambar</th>
+                        <th scope="col">Option</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($users as $User)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $User->name }}</td>
+                            <td>{{ $User->jabatan }}</td>
+                            <td>{{ $User->email }}</td>
+                            <td><img src="{{ asset('storage/' . $User->gambar) }}" width="50px" alt=""></td>
+                            <td>
+                                <a href="/edituser/{{ $User->id }}" class="btn bg-btn"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="/deleteuser/{{ $User->id }}" class="btn bg-btn"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
 
-    </div>
-</section>
+        </div>
+    </section>
 @endsection

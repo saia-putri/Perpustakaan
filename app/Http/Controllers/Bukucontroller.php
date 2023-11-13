@@ -23,7 +23,7 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
-        $bukus = User::all();
+        $bukus = Buku::all();
         $raks = Rak::all();
         return view('admin.buku.createbuku', compact('bukus', 'raks'));
     }

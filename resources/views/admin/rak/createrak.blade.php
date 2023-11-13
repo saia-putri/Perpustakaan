@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    CREATE RAK
+    Create Rak
 @endsection
 @section('content')
     <section id="blog">

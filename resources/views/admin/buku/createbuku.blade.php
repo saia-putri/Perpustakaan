@@ -12,44 +12,56 @@
                         @csrf
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Buku</label>
+                            {{-- <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori"
+                                value=""> --}}
                             <select id="kategori" name="kategori" class="form-control">
-                                @foreach ($bukus as $buku)
-                                    <option value="">{{ $bukus->id }}</option>
+                                @foreach ($bukus as $Buku)
+                                    <option value="">{{ $Buku->kategoris_id }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="judul" class="form-label">Judul Buku</label>
-                            <input type="text" class="form-control" id="judul" name="judul_buku" value="">
+                            <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul"
+                                name="judul" placeholder="judul" value="{{ old('judul') }}">
+                            <div class="invalid-feedback">
+                                @error('judul')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="pengarang_buku" class="form-label">Pengarang Buku</label>
-                            <input type="text" class="form-control" id="pengarang" name="pengarang_buku" value="">
+                            <label for="pengarang" class="form-label">Pengarang Buku</label>
+                            <input type="text" class="form-control" id="pengarang" name="pengarang"
+                                placeholder="pengarang" value="">
                         </div>
                         <div class="mb-3">
-                            <label for="penerbit_buku" class="form-label">Penerbit Buku</label>
-                            <input type="text" class="form-control" id="penerbit" name="penerbit_buku" value="">">
+                            <label for="penerbit" class="form-label">Penerbit Buku</label>
+                            <input type="text" class="form-control" id="penerbit" name="penerbit"
+                                placeholder="pengarang" value="">
                         </div>
                         <div class="mb-3">
                             <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                            <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit" value="">
+                            <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit" placeholder="tahun terbit" value="">
                         </div>
                         <div class="mb-3">
-                            <label for="gambar_buku" class="form-label">Gambar Buku</label>
-                            <input type="file" class="form-control" id="gambar" name="gambar_buku" accept="image/*">
-                            <input type="hidden" name="oldImage" value="">
-                            <img src="" alt="" width="20%" class="img-thumbhnail mt-3" width="30%"
-                                alt="Foto">
+                            <label for="jumlah" class="form-label">Jumlah Buku</label>
+                            <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="jumlah" value="">
                         </div>
                         <div class="mb-3">
-                            <label for="jumlah_buku" class="form-label">Jumlah Buku</label>
-                            <input type="text" class="form-control" id="jumlah" name="jumlah_buku" value="">
+                            <label for="letak" class="form-label">Letak Buku</label>
+                            {{-- <input type="text" class="form-control" id="letak" name="letak" value=""> --}}
+                            <select id="letak" name="letak" class="form-control">
+                            @foreach ($bukus as $Buku)
+                                <option value="">{{ $Buku->raks_id }}</option>
+                            @endforeach
                         </div>
                         <div class="mb-3">
-                            <label for="letak_buku" class="form-label">Letak Buku</label>
-
+                            <label for="gambar" class="form-label">Gambar Buku</label>
+                            <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">
                         </div>
                         <div class="text-end">
+                            <a href="/buku" class="btn bg-btn">Kembali</a>
                             <button type="submit" class="btn bg-btn">post</button>
                         </div>
                     </form>

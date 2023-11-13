@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    DETAIL BUKU
+    Detail Buku
 @endsection
 @section('content')
     <section id="blog">
