@@ -37,7 +37,7 @@
                     <div class="card">
                         <img src="/img/buku (1).jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/detailbuku" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>

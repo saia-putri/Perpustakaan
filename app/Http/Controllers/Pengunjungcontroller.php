@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Http\Controllers\search;
+
 use Illuminate\Http\Request;
 
 class Pengunjungcontroller extends Controller

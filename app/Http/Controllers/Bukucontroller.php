@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Buku;
+use App\Models\Kategori;
 use App\Models\User;
 use App\Models\Rak;
 use Illuminate\Http\Request;
@@ -23,7 +25,11 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         $bukus = Buku::all();
+=======
+        $bukus = Kategori::all();
+>>>>>>> dcf21d6ee8de04845a134f0e21d66ee1028f9011
         $raks = Rak::all();
         return view('admin.buku.createbuku', compact('bukus', 'raks'));
     }
@@ -47,7 +53,7 @@ class Bukucontroller extends Controller
         );
 
         $file = $request->file('gambar');
-        $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
+        $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
 
         $bukus = new Buku;
         $bukus->kategoris_id = $request['kategori'];
@@ -98,15 +104,13 @@ class Bukucontroller extends Controller
             ]
         );
 
-        if($request->file('gambar'))
-        {
-            if($request->oldImage) {
+        if ($request->file('gambar')) {
+            if ($request->oldImage) {
                 storage::delete($request->oldImage);
             }
             $file = $request->file('gambar');
-            $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
-        }
-        else {
+            $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
+        } else {
             $path = $request->oldImage;
         }
 
