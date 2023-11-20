@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class Usercontroller extends Controller
 {
@@ -77,10 +78,6 @@ class Usercontroller extends Controller
     {
         $request->validate(
             [
-                'name' => 'required',
-                'jabatan' => 'required',
-                'email' => 'required|unique:users,email',
-                'password' => 'required',
                 'gambar' => 'mimes:png,jpg,jpeg,gif|image|max:2048',
             ]
         );

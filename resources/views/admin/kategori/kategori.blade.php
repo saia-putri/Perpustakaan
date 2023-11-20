@@ -3,9 +3,6 @@
     Kategori
 @endsection
 @section('content')
-    <section id="header" class="header">
-    </section>
-
     <section>
         <div class="container mb-5 mt-5">
             <div class="justify-content-end">
@@ -25,8 +22,8 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $Kategori->kategori }}</td>
-                                <td width="">{{ $Kategori->ketersediaan }}</td>
-                                <td width="">{{ $Kategori->jumlah }}</td>
+                                <td>{{ $Kategori->ketersediaan }}</td>
+                                <td>{{ $Kategori->jumlah }}</td>
                                 <td>
                                     <a href="/editkategori/{{ $Kategori->id }}" class="btn bg-btn"><i
                                             class="bi bi-pencil-square"></i></a>

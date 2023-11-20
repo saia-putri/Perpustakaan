@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    INFO
+    Info
 @endsection
 @section('content')
     <!-- HEADER -->

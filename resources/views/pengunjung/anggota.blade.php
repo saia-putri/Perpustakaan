@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    AREA ANGGOTA
+    Area Anggota
 @endsection
 @section('content')
     <!-- HEADER -->

@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class Pengunjungcontroller extends Controller
 {
@@ -51,7 +52,8 @@ class Pengunjungcontroller extends Controller
      */
     public function pustakawan()
     {
-        return view ('pengunjung.pustakawan');
+        $users = User::all();
+        return view('pengunjung.pustakawan', compact('users'));
     }
 
     /**

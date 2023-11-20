@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    KATALOG BUKU
+    Katalog Buku
 @endsection
 @section('content')
     <!-- HEADER -->

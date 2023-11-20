@@ -24,13 +24,11 @@ use App\Http\Controllers\Controller;
 Route::get('/berandaadmin', function () {
     return view('admin.index');
 });
-Route::get('/detailbuku', function () {
-    return view('admin.detailbuku');
-});
 // BUKU
 Route::get('/buku', [Bukucontroller::class, 'index']);
 Route::get('/createbuku', [Bukucontroller::class, 'create']);
 Route::post('/savebuku', [Bukucontroller::class, 'store']);
+Route::get('/detailbuku/{id}', [Bukucontroller::class, 'show']);
 Route::get('/editbuku/{id}', [Bukucontroller::class, 'edit']);
 Route::put('/updatebuku/{id}', [Bukucontroller::class, 'update']);
 Route::get('/deletebuku/{id}', [Bukucontroller::class, 'destroy']);

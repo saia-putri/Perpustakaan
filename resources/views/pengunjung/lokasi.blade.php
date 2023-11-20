@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    LOKASI
+    Lokasi
 @endsection
 @section('content')
     <!-- HEADER -->

@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    DETAIL BUKU
+    Detail Buku
 @endsection
 @section('content')
 <!-- HEADER -->

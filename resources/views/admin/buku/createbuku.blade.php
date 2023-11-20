@@ -15,13 +15,8 @@
                             {{-- <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori"
                                 value=""> --}}
                             <select id="kategori" name="kategori" class="form-control">
-<<<<<<< HEAD
-                                @foreach ($bukus as $Buku)
-                                    <option value="">{{ $Buku->kategoris_id }}</option>
-=======
                                 @foreach ($bukus as $buku)
                                     <option value="{{ $buku->id }}">{{ $buku->kategori }}</option>
->>>>>>> dcf21d6ee8de04845a134f0e21d66ee1028f9011
                                 @endforeach
                             </select>
                         </div>
@@ -37,55 +32,57 @@
                         </div>
                         <div class="mb-3">
                             <label for="pengarang" class="form-label">Pengarang Buku</label>
-                            <input type="text" class="form-control" id="pengarang" name="pengarang"
-                                placeholder="pengarang" value="">
+                            <input type="text" class="form-control @error('pengarang') is-invalid @enderror"
+                                id="pengarang" name="pengarang" placeholder="pengarang" value="{{ old('pengarang') }}">
+                            <div class="invalid-feedback">
+                                @error('pengarang')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                         <div class="mb-3">
-<<<<<<< HEAD
                             <label for="penerbit" class="form-label">Penerbit Buku</label>
-                            <input type="text" class="form-control" id="penerbit" name="penerbit"
-                                placeholder="pengarang" value="">
-=======
-                            <label for="penerbit_buku" class="form-label">Penerbit Buku</label>
-                            <input type="text" class="form-control" id="penerbit" name="penerbit_buku" value="">
->>>>>>> dcf21d6ee8de04845a134f0e21d66ee1028f9011
+                            <input type="text" class="form-control @error('penerbit') is-invalid @enderror"
+                                id="penerbit" name="penerbit" placeholder="penerbit" value="{{ old('penerbit') }}">
+                            <div class="invalid-feedback">
+                                @error('penerbit')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                            <input type="text" class="form-control" id="tahun_terbit" name="tahun_terbit" placeholder="tahun terbit" value="">
+                            <input type="text" class="form-control @error('tahun_terbit') is-invalid @enderror"
+                                id="tahun_terbit" name="tahun_terbit" placeholder="tahun terbit"
+                                value="{{ old('tahun_terbit') }}">
+                            <div class="invalid-feedback">
+                                @error('tahun_terbit')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
-
                         <div class="mb-3">
-                            <label for="jumlah_buku" class="form-label">Jumlah Buku</label>
-                            <input type="text" class="form-control" id="jumlah" name="jumlah_buku" value="">
+                            <label for="jumlah" class="form-label">Jumlah Buku</label>
+                            <input type="text" class="form-control @error('jumlah') is-invalid @enderror"
+                                id="jumlah" name="jumlah" placeholder="jumlah" value="{{ old('jumlah') }}">
+                            <div class="invalid-feedback">
+                                @error('jumlah')
+                                    {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="letak_buku" class="form-label">Letak Buku</label>
-                            <select id="kategori" name="kategori" class="form-control">
+                            <label for="letak" class="form-label">Letak Buku</label>
+                            <select id="letak" name="rak" class="form-control">
                                 @foreach ($raks as $rak)
                                     <option value="{{ $rak->id }}">{{ $rak->rak }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="jumlah" class="form-label">Jumlah Buku</label>
-                            <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="jumlah" value="">
-                        </div>
-<<<<<<< HEAD
-                        <div class="mb-3">
-                            <label for="letak" class="form-label">Letak Buku</label>
-                            {{-- <input type="text" class="form-control" id="letak" name="letak" value=""> --}}
-                            <select id="letak" name="letak" class="form-control">
-                            @foreach ($bukus as $Buku)
-                                <option value="">{{ $Buku->raks_id }}</option>
-                            @endforeach
-                        </div>
-                        <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar Buku</label>
                             <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">
                         </div>
-=======
->>>>>>> dcf21d6ee8de04845a134f0e21d66ee1028f9011
                         <div class="text-end">
                             <a href="/buku" class="btn bg-btn">Kembali</a>
                             <button type="submit" class="btn bg-btn">post</button>

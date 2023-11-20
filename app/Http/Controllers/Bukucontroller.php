@@ -25,11 +25,7 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        $bukus = Buku::all();
-=======
         $bukus = Kategori::all();
->>>>>>> dcf21d6ee8de04845a134f0e21d66ee1028f9011
         $raks = Rak::all();
         return view('admin.buku.createbuku', compact('bukus', 'raks'));
     }
@@ -58,8 +54,8 @@ class Bukucontroller extends Controller
         $bukus = new Buku;
         $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
-        $bukus->jumlah = $request['jumlah_buku'];
-        $bukus->raks_id = $request['letak_buku'];
+        $bukus->jumlah = $request['jumlah'];
+        $bukus->raks_id = $request['rak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];
@@ -74,7 +70,8 @@ class Bukucontroller extends Controller
      */
     public function show(string $id)
     {
-        //
+        $buku = Buku::find($id);
+        return view('admin.buku.detailbuku', compact('buku'));
     }
 
     /**
@@ -83,7 +80,7 @@ class Bukucontroller extends Controller
     public function edit(string $id)
     {
         $bukus = Buku::find($id);
-        return view('admin.buku.editbuku', compact('Buku'));
+        return view('admin.buku.editbuku', compact('bukus'));
     }
 
     /**
@@ -93,14 +90,7 @@ class Bukucontroller extends Controller
     {
         $request->validate(
             [
-                'kategori' => 'required',
-                'judul' => 'required',
                 'gambar' => 'mimes:png,jpg,gif|image|max:5048',
-                'pengarang' => 'required',
-                'penerbit' => 'required',
-                'tahun_terbit' => 'required',
-                'jumlah' => 'required',
-                'rak' => 'required',
             ]
         );
 
@@ -118,7 +108,7 @@ class Bukucontroller extends Controller
         $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];
-        $bukus->raks_id = $request['letak'];
+        $bukus->raks_id = $request['rak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];
