@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Buku;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -65,6 +66,15 @@ class Pengunjungcontroller extends Controller
         return view ('pengunjung.masuk');
     }
 
+    /**
+     * Display a listing of the resource.
+     */
+    public function katalog()
+    {
+        $buku = Buku::all();
+        return view ('pengunjung.katalogbuku', compact('buku'));
+    }
+
      /**
      * Display the specified resource.
      */
@@ -89,7 +99,9 @@ class Pengunjungcontroller extends Controller
             $kategoris = Kategori::all();
             $raks = Rak::all();
         }
+        
         return view ('pengunjung.index');
+        
     }
 
 

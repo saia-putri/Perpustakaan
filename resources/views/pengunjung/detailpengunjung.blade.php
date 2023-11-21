@@ -28,7 +28,7 @@
                                     Judul Buku : {{ $buku->judul }} <br>
                                 </p>
                                 <p class="card-text">
-                                    Kategori Buku : {{ $buku->kategoris_id }} <br>
+                                    Kategori Buku : {{ $buku->kategoris['kategori'] }} <br>
                                 </p>
                                 <p class="card-text">
                                     Pengarang Buku : {{ $buku->pengarang }} <br>
@@ -43,7 +43,7 @@
                                     Jumlah Buku : {{ $buku->jumlah }} <br>
                                 </p>
                                 <p class="card-text">
-                                    Letak Buku : {{ $buku->raks_id }} <br>
+                                    Letak Buku : {{ $buku->raks['rak'] }} <br>
                                 </p>
                                 <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04
                                         Palembang</small></p>

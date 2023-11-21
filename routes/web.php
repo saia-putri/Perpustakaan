@@ -59,9 +59,6 @@ Route::get('/deleteuser/{id}', [Usercontroller::class, 'destroy']);
 
 
 // pengunjung
-Route::get('/katalogbuku', function () {
-    return view('pengunjung.katalogbuku');
-});
 Route::get('/main', [Pengunjungcontroller::class, 'index']);
 Route::get('/warta', [Pengunjungcontroller::class, 'warta']);
 Route::get('/info', [Pengunjungcontroller::class, 'info']);
@@ -69,6 +66,7 @@ Route::get('/lokasi', [Pengunjungcontroller::class, 'lokasi']);
 Route::get('/anggota', [Pengunjungcontroller::class, 'anggota']);
 Route::get('/pustakawan', [Pengunjungcontroller::class, 'pustakawan']);
 Route::get('/masuk', [Pengunjungcontroller::class, 'masuk']);
+Route::get('/katalogbuku', [Pengunjungcontroller::class, 'katalog']);
 Route::get('/detailpengunjung/{id}', [Pengunjungcontroller::class, 'show']);
 
 

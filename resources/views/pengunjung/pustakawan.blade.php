@@ -14,6 +14,7 @@
         <div class="container py-5">
             <div class="row">
                 <h5 class="card-title mb-3 pustakawan">Profil Pustakawan</h5>
+                
                 @foreach ($users as $User)
                     <div class="card mb-3" style="max-width: 46.875em;">
                         <div class="row g-0">
@@ -38,6 +39,7 @@
                         </div>
                     </div>
                 @endforeach
+
                 <div class="col-md-3 info">
                     <h4 class="card-header">INFORMASI</h4>
                     <hr>

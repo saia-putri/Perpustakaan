@@ -25,9 +25,9 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $buku->kategoris['kategori'] }}</td>
-                                <td>{{ $buku->judul }}</td>
+                                <td width="25%">{{ $buku->judul }}</td>
                                 <td><img src="{{ asset('storage/' . $buku->gambar) }}" width="62.5em" alt=""></td>
-                                <td>{{ $buku->jumlah }}</td>
+                                <td width="20%">{{ $buku->jumlah }}</td>
                                 <td>{{ $buku->raks['rak'] }}</td>
                                 <td>
                                     <a href="/editbuku/{{ $buku->id }}" class="btn bg-btn"><i

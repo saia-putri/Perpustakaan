@@ -10,7 +10,7 @@
                 <form class="d-flex mt-3" role="search" action="/search" method="get" autocomplete="off">
                     <div class="marquee down pencarian">
                         <h1 class="animated fadeInUp delay2">CARI</h1>
-                        <p class="s-search-info">
+                        <p class="s-search-info font1">
                             masukkan satu atau lebih kata kunci dari judul, pengarang, atau subyek
                         </p>
 
