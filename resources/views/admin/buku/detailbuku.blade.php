@@ -6,10 +6,10 @@
     <section id="blog">
         <div class="container mb-5 mt-5 blogbook">
 
-            <div class="card mb-3" style="max-width: 850px;">
+            <div class="card mb-3" style="max-width: 53.125em;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="/img/buku (3).jpg" class="img-fluid rounded-start" alt="...">
+                        <img src="{{ asset('storage/' . $buku->gambar) }}" width="100%" alt="">
                     </div>
                     <div class="col-md-8">
                         <h5 class="card-header">Detail Cantuman</h5>
@@ -26,9 +26,6 @@
                             <p class="card-text">
                                 Penerbit Buku : {{ $buku->penerbit }} <br>
                             </p>
-                            {{-- <p class="card-text">
-                                    Ketersediaan Buku : <br>
-                                </p> --}}
                             <p class="card-text">
                                 Tahun Terbit : {{ $buku->tahun_terbit }} <br>
                             </p>

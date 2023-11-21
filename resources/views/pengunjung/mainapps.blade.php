@@ -75,7 +75,7 @@
 
     <!-- ini footer -->
     <footer class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
-        <p class="mb-0 px-3 text-white">&copy; 2023 Company, Inc</p>
+        <p class="mb-0 px-3 text-white">&copy; 2023 Pengadilan Militer I-04 Palembang</p>
         <ul class="nav col-md-6 justify-content-end">
             <li class="nav-item"><a href="/main" class="nav-link px-2 ">Beranda Depan</a></li>
             <li class="nav-item"><a href="https://wa.me/6281234788104" class="nav-link px-2 text-white">WhatsApp</a>
@@ -85,7 +85,7 @@
             <li class="nav-item"><a href="https://www.instagram.com/dilmil_palembang/"
                     class="nav-link px-2 text-white">Instagram</a></li>
             <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang"
-                    class="nav-link px-2 text-white">Youtube</a></li>
+                    class="nav-link px-3 text-white">Youtube</a></li>
         </ul>
     </footer>
 

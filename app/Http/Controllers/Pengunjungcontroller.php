@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Buku;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -64,6 +65,15 @@ class Pengunjungcontroller extends Controller
         return view ('pengunjung.masuk');
     }
 
+     /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        $buku = Buku::find($id);
+        return view ('pengunjung.detailpengunjung', compact('buku'));
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -96,14 +106,6 @@ class Pengunjungcontroller extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
     {
         //
     }

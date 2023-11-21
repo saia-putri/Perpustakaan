@@ -10,11 +10,11 @@
                     <thead>
                         <a href="/createkategori" class="btn bg-btn mb-2">Tambahkan Kategori</a>
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Kategori</th>
-                            <th scope="col">Ketersediaan</th>
-                            <th scope="col">Jumlah</th>
-                            <th scope="col">Option</th>
+                            <th scope="col-md">No</th>
+                            <th scope="col-md">Kategori</th>
+                            <th scope="col-md">Ketersediaan</th>
+                            <th scope="col-md">Jumlah</th>
+                            <th scope="col-md">Option</th>
                         </tr>
                     </thead>
                     <tbody>

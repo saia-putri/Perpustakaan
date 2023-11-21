@@ -10,12 +10,12 @@
                 <thead>
                     <a href="/createuser" class="btn bg-btn mb-2">Tambahkan User</a>
                     <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Jabatan</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Gambar</th>
-                        <th scope="col">Option</th>
+                        <th scope="col-md">No</th>
+                        <th scope="col-md">Nama</th>
+                        <th scope="col-md">Jabatan</th>
+                        <th scope="col-md">Email</th>
+                        <th scope="col-md">Gambar</th>
+                        <th scope="col-md">Option</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +25,7 @@
                             <td>{{ $User->name }}</td>
                             <td>{{ $User->jabatan }}</td>
                             <td>{{ $User->email }}</td>
-                            <td><img src="{{ asset('storage/' . $User->gambar) }}" width="50px" alt=""></td>
+                            <td><img src="{{ asset('storage/' . $User->gambar) }}" width="62.5em" alt=""></td>
                             <td>
                                 <a href="/edituser/{{ $User->id }}" class="btn bg-btn"><i
                                         class="bi bi-pencil-square"></i></a>

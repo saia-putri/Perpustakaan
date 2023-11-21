@@ -36,7 +36,7 @@
 
             <!-- ini sebelah kiri -->
             <div class="col-3">
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="width: 280px;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="width: 17.5em;">
 
                     <div class="dropdown">
                         <a href="#"
@@ -44,11 +44,10 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="" width="32" height="32"
                                 class="rounded-circle me-2">
+                                {{-- <img src="{{ asset('storage/' . $User->gambar) }}" alt="" width="32" height="32"
+                                class="rounded-circle me-2"> --}}
                             <strong>Nama</strong>
                         </a>
-                        <form class="col-12 col-lg-auto mb-3 mt-4 mb-lg-0" role="search">
-                            <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                        </form>
                         <ul class="dropdown-menu text-small shadow">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Sign out</a></li>
@@ -95,7 +94,7 @@
             </div>
 
             <!-- ini konten -->
-            <div class="col-8">
+            <div class="col-md-8">
                 @yield('content')
             </div>
 
@@ -103,7 +102,7 @@
 
             <!-- ini footer -->
             <footer class="d-flex flex-wrap menu1 bg-dilmil justify-content-between align-items-center py-3 border-top">
-                <p class="mb-0 px-3 text-white">&copy; 2023 Company, Inc</p>
+                <p class="mb-0 px-3 text-white">&copy; 2023 Pengadilan Militer I-04 Palembang</p>
                 <ul class="nav col-md-6 justify-content-end">
                     <li class="nav-item"><a href="/berandaadmin" class="nav-link px-2">Beranda Depan</a></li>
                     <li class="nav-item"><a href="https://wa.me/6281234788104"
@@ -113,7 +112,7 @@
                     <li class="nav-item"><a href="https://www.instagram.com/dilmil_palembang/"
                             class="nav-link px-2 text-white">Instagram</a></li>
                     <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang"
-                            class="nav-link px-2 text-white">Youtube</a></li>
+                            class="nav-link px-3 text-white">Youtube</a></li>
                 </ul>
             </footer>
 

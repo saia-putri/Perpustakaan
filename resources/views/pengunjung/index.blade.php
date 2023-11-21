@@ -1,6 +1,6 @@
 @extends('pengunjung.mainapps')
 @section('title')
-    INDEX PENGUNJUNG
+    Home Pengunjung
 @endsection
 @section('content')
     <section id="Pencarian">
@@ -16,13 +16,13 @@
 
                         <div class="container">
                             <div class="row">
-                                <div class="col">
+                                <div class="col-md">
                                     <input class="form-control form2" type="search" placeholder="Search"
                                         aria-label="Search" type="text" class="s-search animated fadeInUp delay4"
                                         id="keyword" name="keywords" value="" lang="id_ID" aria-hidden="true"
                                         autocomplete="off">
                                 </div>
-                                <div class="col">
+                                <div class="col-md">
                                     <button class="btn bg-btn btn-outline-light form3 s-btn animated fadeInUp delay4"
                                         type="submit" name="search" value="search"><i class="bi bi-search"></i></button>
                                 </div>

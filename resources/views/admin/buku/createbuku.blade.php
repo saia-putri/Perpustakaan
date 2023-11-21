@@ -12,8 +12,6 @@
                         @csrf
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Buku</label>
-                            {{-- <input type="text" class="form-control" id="kategori" name="kategori" placeholder="kategori"
-                                value=""> --}}
                             <select id="kategori" name="kategori" class="form-control">
                                 @foreach ($bukus as $buku)
                                     <option value="{{ $buku->id }}">{{ $buku->kategori }}</option>

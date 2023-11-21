@@ -22,14 +22,14 @@
 
 .admin{
     font-family: var(--font-family);
-    font-size: 25px;
+    font-size: 1.5625em;
 }
 #Pencarian{
     background-image: url(img/perpus1.png);
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 660px;
+    height: 41.25em;
 }
 .bg-btn{
     color: var(--warna-text-primary);
@@ -45,19 +45,19 @@
     background-color: #5291aa;
 }
 .blogbook h5{
-    font-size: 30px;
+    font-size: 1.875em;
     font-weight: bold;
     font-family: var(--font-family);
 }
 .blogbook p{
-    font-size: 18px;
+    font-size:  1.125em;
     font-family: var(--font-family3);
 }
 
 /* PENGUNJUNG */
 .pengunjung{
     background: rgba(0,0,0, 0.5);
-    font-size: 18px;
+    font-size: 1.125em;
     font-family: 'Times New Roman', Times, serif;
 }
 .pengunjung1{
@@ -70,30 +70,31 @@
     background-color: var(--warna-bg-primary);
 }
 .bg-dilmil2{
-    height: 50px;
+    height: 3.125em;
     font-family: var(--font-family3);
     background-color: var(--warna-bg-primary);
 }
 .pencarian{
     color: var(--color-text-primary1);
-    margin-top: 180px;
+    margin-top: 11.25em;
     margin-left: 30%;
     text-align: center;
 }
 .form2{
-    height: 50px;
-    width: 420px;
-    border-radius: 20px;
+    height: 3.125em;
+    width: 26.25em;
+    border-radius: 1.25em;
 }
 .form3{
-    height: 50px;
-    width: 50px;
-    border-radius: 14px;
+    height: 3.125em;
+    width: 3.125em;
+    border-radius: 0.875em;
 }
 .info{
     font-family: var(--font-family3);
     text-align: justify;
-    margin-left: 55px;
+    margin: 0%;
+    font-size: 1.0625em;
 }
 .menu1{
     color: #ffffff;
@@ -102,38 +103,46 @@
     color: #000000;
 }
 .carousel-item{
-    height: 300px;
+    height: 18.75em;
 }
 .carousel-item img{
-    margin-top: 15px;
+    margin-top: 0.9375em;
 }
 .img2{
     background-image: url(img/perpus3.png);
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 250px;
+    height: 18.625em;
 }
 
-.pencarian1{
+/* .pencarian1{
     color: var(--color-text-primary1);
-    margin-top: 180px;
-    margin-left: 800px;
+    margin-top: 11.25em;
+    margin-left: 50em;
     text-align: center;
-}
-.form4{
-    height: 50px;
-    width: 350px;
-    border-radius: 20px;
+} */
+/* .form4{
+    height: 3.125em;
+    width: 21.875em;
+    border-radius: 1.25em;
 }
 .form5{
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-}
+    height: 3.125em;
+    width: 3.125em;
+    border-radius: 0.625em;
+} */
 .form-signin{
-    width: 350px;
+    width: 21.875em;
     font-family: var(--font-family3);
+}
+.pustakawan{
+    font-family: var(--font-family);
+    font-size: 1.875em;
+}
+.pustakawan1{
+    font-family: var(--font-family3);
+    font-size: 1.125em;
 }
 /* slide */
 @keyframes slider{
@@ -180,7 +189,7 @@
 #slider figure img{
     width: 50%;
     float: left;
-    margin-left: 25px;
+    margin-left: 1.5625em;
 }
 .katalog img{
     width: 100%;
@@ -189,6 +198,6 @@
     text-align: center;
 }
 .katalogbuku{
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
     font-family: var(--font-family3);
 }
