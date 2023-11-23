@@ -71,8 +71,8 @@ class Pengunjungcontroller extends Controller
      */
     public function katalog()
     {
-        $buku = Buku::all();
-        return view ('pengunjung.katalogbuku', compact('buku'));
+        $bukus = Buku::all();
+        return view ('pengunjung.katalogbuku', compact('bukus'));
     }
 
      /**

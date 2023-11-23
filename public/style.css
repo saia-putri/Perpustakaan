@@ -159,7 +159,7 @@
     font-size: 1.125em;
 }
 /* slide */
-@keyframes slider{
+/* @keyframes slider{
     0%{
         left: 0%;
     }
@@ -204,7 +204,8 @@
     width: 50%;
     float: left;
     margin-left: 1.5625em;
-}
+} */
+
 .katalog img{
     width: 100%;
 }
@@ -214,4 +215,8 @@
 .katalogbuku{
     margin-bottom: 1.875em;
     font-family: var(--font-family3);
+}
+/* carousel */
+.button-fitur{
+    margin-bottom: 15px;
 }

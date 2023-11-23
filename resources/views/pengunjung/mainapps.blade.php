@@ -49,6 +49,9 @@
                             <a class="nav-link" aria-current="page" href="/main">Beranda Depan</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/katalogbuku">Katalog Buku</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/info">Info Perpustakaan</a>
                         </li>
                         <li class="nav-item">

@@ -77,8 +77,8 @@
 
                         </div>
                     </div> --}}
-                {{--  --}}
-                <div class="container py-5">
+
+                {{-- <div class="container py-5">
                     <div id="slider">
                         <figure>
                             <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
@@ -86,6 +86,32 @@
                             <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
                             <img src="/img/buku (1).jpg" alt="" style="width:20%; height:150px;">
                         </figure>
+                    </div>
+                </div> --}}
+                {{-- 1 --}}
+                <div class="row">
+                    <div class="col-3">
+                        <button class="button-fitur">Lihat Semua...</button>
+                    </div>
+                </div>
+                {{-- 2 --}}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content">
+
+                            <div class="card-fitur">
+                                <a href="">
+                                    <img src="/img/buku (5).jpg" alt="" width="14%">
+                                </a>
+                                <div class="overlay">
+                                    <div>
+                                        <h5>BUKU</h5>
+                                        <span>buku</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
