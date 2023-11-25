@@ -32,6 +32,7 @@ Route::get('/detailbuku/{id}', [Bukucontroller::class, 'show']);
 Route::get('/editbuku/{id}', [Bukucontroller::class, 'edit']);
 Route::put('/updatebuku/{id}', [Bukucontroller::class, 'update']);
 Route::get('/deletebuku/{id}', [Bukucontroller::class, 'destroy']);
+Route::get('/profil/{id}', [Bukucontroller::class, 'profil']);
 
 // KATEGORI
 Route::get('/kategori', [Kategoricontroller::class, 'index']);

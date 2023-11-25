@@ -126,4 +126,13 @@ class Bukucontroller extends Controller
         Buku::destroy('id', $id);
         return redirect('/buku');
     }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function profil(string $id)
+    {
+        $users = User::find($id);
+        return view('admin.profil', compact('users'));
+    }
 }

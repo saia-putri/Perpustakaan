@@ -31,13 +31,6 @@
     font-family: var(--font-family);
     font-size: 1.5625em;
 }
-#Pencarian{
-    background-image: url(img/perpus1.png);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 38.25em;
-}
 .bg-btn{
     color: var(--warna-text-primary);
     background-color: var(--warna-bg-primary);
@@ -90,7 +83,7 @@
 }
 .pencarian{
     color: var(--color-text-primary1);
-    margin-top: 11.25em;
+    margin-top: 15.25em;
     margin-left: 30%;
     text-align: center;
 }
@@ -121,6 +114,13 @@
 }
 .carousel-item img{
     margin-top: 0.9375em;
+}
+#Pencarian{
+    background-image: url(img/perpus1.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 32.25em;
 }
 .img2{
     background-image: url(img/perpus3.png);

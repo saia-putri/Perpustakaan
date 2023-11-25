@@ -61,8 +61,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="jumlah" class="form-label">Jumlah Buku</label>
-                            <input type="text" class="form-control @error('jumlah') is-invalid @enderror"
-                                id="jumlah" name="jumlah" placeholder="jumlah" value="{{ old('jumlah') }}">
+                            <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah"
+                                name="jumlah" placeholder="jumlah" value="{{ old('jumlah') }}">
                             <div class="invalid-feedback">
                                 @error('jumlah')
                                     {{ $message }}

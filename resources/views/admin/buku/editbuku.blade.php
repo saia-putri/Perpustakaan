@@ -14,6 +14,11 @@
                         @csrf
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Buku</label>
+                            {{-- <select id="kategori" name="kategori" class="form-control">
+                                @foreach ($bukus as $buku)
+                                    <option value="{{ $buku->id }}">{{ $bukus->kategoris_id }}</option>
+                                @endforeach
+                            </select> --}}
                             <input type="text" class="form-control" id="kategori" name="kategori"
                                 value="{{ $bukus->kategoris_id }}">
                         </div>
