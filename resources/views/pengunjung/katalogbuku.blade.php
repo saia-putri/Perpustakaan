@@ -15,19 +15,31 @@
                 <h2>Katalog Buku</h2>
                 <hr>
             </div>
-            @foreach ($bukus as $buku)
-                <div class="row row-cols-1 row-cols-md-2 g-4 katalog">
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="{{ asset('storage/' . $buku->gambar) }}" width="100%" alt="">
-                            <div class="card-body">
-                                <a href="/detailpengunjung/{{ $buku->id }}" class="btn btn-primary">Detail Buku</a>
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row">
+                        @foreach ($bukus as $buku)
+                            <div class="col-md-4 mb-4">
+                                <div class="card katalog">
+                                    <img src="{{ asset('storage/' . $buku->gambar) }}" alt="" width="100%"
+                                        height="370px">
+                                    <div class="card-body">
+                                        <a href="/detailpengunjung/{{ $buku->id }}" class="btn btn-primary">Detail
+                                            Buku</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-            @endforeach
 
+                </div>
+                <div class="col-3 info">
+                    <h4 class="card-header">INFORMASI</h4>
+                    <hr>
+                    <p>Akses Katalog Publik Daring - Gunakan fasilitas pencarian untuk mempercepat penemuan data katalog</p>
+                </div>
+            </div>
         </div>
-        </div>
+
     </section>
 @endsection

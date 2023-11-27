@@ -11,18 +11,18 @@
 
     <!--  -->
     <section id="header" class="header">
-        <div class="container py-5 blogbook">
+        <div class="container mt-5 mb-5 blogbook">
             <div class="row">
 
                 <div class="card" style="max-width: 50em;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
+                    <div class="row">
+                        <div class="judul">
+                            <h5 class="card-header">Detail Cantuman</h5>
+                        </div>
+                        <div class="col-md-4 mt-3 mb-2">
                             <img src="{{ asset('storage/' . $buku->gambar) }}" width="100%" alt="">
                         </div>
                         <div class="col-md-8">
-                            <div class="judul">
-                                <h5 class="card-header">Detail Cantuman</h5>
-                            </div>
                             <div class="card-body">
                                 <p class="card-text">
                                     Judul Buku : {{ $buku->judul }} <br>

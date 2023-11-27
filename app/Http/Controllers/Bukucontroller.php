@@ -80,6 +80,8 @@ class Bukucontroller extends Controller
     public function edit(string $id)
     {
         $bukus = Buku::find($id);
+        // $ktggg = Kategori::all();
+        // $raks = Rak::all();
         return view('admin.buku.editbuku', compact('bukus'));
     }
 
@@ -105,10 +107,8 @@ class Bukucontroller extends Controller
         }
 
         $bukus = Buku::find($id);
-        $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];
-        $bukus->raks_id = $request['rak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];
