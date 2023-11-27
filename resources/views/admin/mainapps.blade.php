@@ -35,7 +35,7 @@
         <div class="row">
 
             <!-- ini sebelah kiri -->
-            <div class="col-3">
+            <div class="col-md-3">
                 <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="width: 17.5em;">
 
                     <div class="dropdown">

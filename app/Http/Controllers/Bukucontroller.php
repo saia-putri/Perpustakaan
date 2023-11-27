@@ -132,7 +132,7 @@ class Bukucontroller extends Controller
      */
     public function profil(string $id)
     {
-        $users = User::find($id);
+        $users = User::all($id);
         return view('admin.profil', compact('users'));
     }
 }
