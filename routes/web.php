@@ -6,6 +6,7 @@ use App\Http\Controllers\Kategoricontroller;
 use App\Http\Controllers\Rakcontroller;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\Pengunjungcontroller;
+use App\Http\Controllers\Logincontroller;
 use App\Http\Controllers\Controller;
 
 
@@ -21,7 +22,7 @@ use App\Http\Controllers\Controller;
 */
 
 // admin
-Route::get('/berandaadmin', function () {
+Route::get('/dashboard', function () {
     return view('admin.index');
 });
 // BUKU
@@ -72,3 +73,6 @@ Route::get('/detailpengunjung/{id}', [Pengunjungcontroller::class, 'show']);
 
 
 Route::get('/search', [Pengunjungcontroller::class, 'search']);
+
+// login
+Route::get('/login', [Logincontroller::class, 'proses']);

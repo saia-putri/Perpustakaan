@@ -127,12 +127,10 @@ class Bukucontroller extends Controller
         return redirect('/buku');
     }
 
-    /**
-     * Display a listing of the resource.
-     */
-    public function profil(string $id)
+   
+    public function profil()
     {
-        $users = User::all($id);
+        $users = User::all();
         return view('admin.profil', compact('users'));
     }
 }

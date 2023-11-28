@@ -29,7 +29,9 @@
                         Remember me
                     </label>
                 </div>
-                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                <a href="/masuk">
+                    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+                </a>
             </form>
         </div>
     </main>

@@ -36,7 +36,7 @@
 
             <!-- ini sebelah kiri -->
             <div class="col-md-3">
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="width: 17.5em;">
+                <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="height:100%;">
 
                     <div class="dropdown">
                         <a href="#"
@@ -44,7 +44,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="" width="32" height="32"
                                 class="rounded-circle me-2">
-                                {{-- <img src="{{ asset('storage/' . $User->gambar) }}" alt="" width="32" height="32"
+                            {{-- <img src="{{ asset('storage/' . $User->gambar) }}" alt="" width="32" height="32"
                                 class="rounded-circle me-2"> --}}
                             <strong>Nama</strong>
                         </a>
@@ -57,7 +57,7 @@
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto ">
                         <li class="nav-item">
-                            <a href="/berandaadmin" class="nav-link link-body-emphasis" aria-current="page"><i
+                            <a href="/dashboard" class="nav-link link-body-emphasis" aria-current="page"><i
                                     class="bi bi-house-door"></i>
                                 <svg class="bi pe-none me-2" width="16" height="16"></svg>
                                 Home
@@ -101,18 +101,23 @@
 
 
             <!-- ini footer -->
-            <footer class="d-flex flex-wrap menu1 bg-dilmil justify-content-between align-items-center py-3 border-top">
-                <p class="mb-0 px-3 text-white">&copy; 2023 Pengadilan Militer I-04 Palembang</p>
-                <ul class="nav col-md-6 justify-content-end">
-                    <li class="nav-item"><a href="/berandaadmin" class="nav-link px-2">Beranda Depan</a></li>
-                    <li class="nav-item"><a href="https://wa.me/6281234788104"
-                            class="nav-link px-2 text-white">WhatsApp</a></li>
+            <footer
+                class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
+                <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang</p>
+                <ul class="nav col-md-6 icon justify-content-end">
+                    <li class="nav-item"><a href="/dashboard" class="nav-link px-2 "><i class="bi bi-house-door"></i></a>
+                    </li>
+                    <li class="nav-item"><a href="https://dilmil-palembang.go.id/id/"
+                            class="nav-link px-2 text-white"><i class="bi bi-globe2"></i></a></li>
+                    <li class="nav-item"><a href="https://wa.me/6281234788104" class="nav-link px-2 text-white"><i
+                                class="bi bi-whatsapp"></i></a>
+                    </li>
                     <li class="nav-item"><a href="https://www.facebook.com/pengadilanmiliter.palembang"
-                            class="nav-link px-2 text-white">Facebook</a></li>
+                            class="nav-link px-2 text-white"><i class="bi bi-facebook"></i></a></li>
                     <li class="nav-item"><a href="https://www.instagram.com/dilmil_palembang/"
-                            class="nav-link px-2 text-white">Instagram</a></li>
+                            class="nav-link px-2 text-white"><i class="bi bi-instagram"></i></a></li>
                     <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang"
-                            class="nav-link px-3 text-white">Youtube</a></li>
+                            class="nav-link px-2 text-white"><i class="bi bi-youtube"></i></a></li>
                 </ul>
             </footer>
 
