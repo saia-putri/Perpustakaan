@@ -42,7 +42,7 @@ class Logincontroller extends Controller
 
     public function logout(Request $request)
     {
-        // 
+        return redirect('/login'); 
     }
 
     /**
