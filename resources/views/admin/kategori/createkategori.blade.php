@@ -20,27 +20,6 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="ketersediaan" class="form-label">Ketersediaan</label>
-                            <input type="text" class="form-control @error('ketersediaan') is-invalid @enderror"
-                                id="ketersediaan" name="ketersediaan" placeholder="ketersediaan"
-                                value="{{ old('ketersediaan') }}">
-                            <div class="invalid-feedback">
-                                @error('ketersediaan')
-                                    {{ $message }}
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="jumlah" class="form-label">Jumlah Buku</label>
-                            <input type="text" class="form-control @error('jumlah') is-invalid @enderror" id="jumlah"
-                                name="jumlah" placeholder="jumlah" value="{{ old('jumlah') }}">
-                            <div class="invalid-feedback">
-                                @error('jumlah')
-                                    {{ $message }}
-                                @enderror
-                            </div>
-                        </div>
                         <div class="text-end">
                             <a href="/kategori" class="btn bg-btn">Kembali</a>
                             <button type="submit" class="btn bg-btn">post</button>

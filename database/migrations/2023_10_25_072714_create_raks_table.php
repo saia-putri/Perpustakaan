@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('raks', function (Blueprint $table) {
             $table->id();
             $table->string('rak');
-            $table->text('jumlah');
+            $table->text('jumlahdatabuku')->nullable();
             $table->timestamps();
         });
     }

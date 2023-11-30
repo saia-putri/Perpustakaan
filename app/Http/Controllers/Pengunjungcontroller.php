@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Buku;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class Pengunjungcontroller extends Controller
 {
@@ -11,7 +15,7 @@ class Pengunjungcontroller extends Controller
      */
     public function index()
     {
-        return view ('pengunjung.index');
+        return view('pengunjung.index');
     }
 
     /**
@@ -19,7 +23,7 @@ class Pengunjungcontroller extends Controller
      */
     public function warta()
     {
-        return view ('pengunjung.warta');
+        return view('pengunjung.warta');
     }
 
     /**
@@ -27,7 +31,7 @@ class Pengunjungcontroller extends Controller
      */
     public function info()
     {
-        return view ('pengunjung.info');
+        return view('pengunjung.info');
     }
 
     /**
@@ -35,7 +39,7 @@ class Pengunjungcontroller extends Controller
      */
     public function lokasi()
     {
-        return view ('pengunjung.lokasi');
+        return view('pengunjung.lokasi');
     }
 
     /**
@@ -43,7 +47,7 @@ class Pengunjungcontroller extends Controller
      */
     public function anggota()
     {
-        return view ('pengunjung.anggota');
+        return view('pengunjung.anggota');
     }
 
     /**
@@ -51,15 +55,26 @@ class Pengunjungcontroller extends Controller
      */
     public function pustakawan()
     {
-        return view ('pengunjung.pustakawan');
+        $users = User::all();
+        return view('pengunjung.pustakawan', compact('users'));
     }
 
     /**
      * Display a listing of the resource.
      */
-    public function masuk()
+    public function katalog()
     {
-        return view ('pengunjung.masuk');
+        $bukus = Buku::all();
+        return view('pengunjung.katalogbuku', compact('bukus'));
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
+    {
+        $buku = Buku::find($id);
+        return view('pengunjung.detailpengunjung', compact('buku'));
     }
 
     /**
@@ -67,17 +82,17 @@ class Pengunjungcontroller extends Controller
      */
     public function search(Request $request)
     {
-        if($request->has(search)){
+        if ($request->has(search)) {
             $bukus = Buku::where('bukus', $request->search)->get();
             $kategoris = Kategori::where('kategoris', $request->search)->get();
             $raks = Rak::where('raks', $request->search)->get();
-        }
-        else{
+        } else {
             $bukus = Buku::all();
             $kategoris = Kategori::all();
             $raks = Rak::all();
         }
-        return view ('pengunjung.index');
+
+        return view('pengunjung.index');
     }
 
 
@@ -94,14 +109,6 @@ class Pengunjungcontroller extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
     {
         //
     }

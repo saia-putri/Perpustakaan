@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    EDIT USER
+    create user
 @endsection
 @section('content')
     <section id="user">

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class Kategoricontroller extends Controller
@@ -12,8 +14,9 @@ class Kategoricontroller extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $kategoris = Kategori::all();
-        return view('admin.kategori.kategori', compact('kategoris'));
+        return view('admin.kategori.kategori', compact('kategoris', 'user'));
     }
 
     /**
@@ -21,7 +24,8 @@ class Kategoricontroller extends Controller
      */
     public function create()
     {
-        return view('admin.kategori.createkategori');
+        $user = Auth::user();
+        return view('admin.kategori.createkategori', compact('user'));
     }
 
     /**
@@ -32,15 +36,11 @@ class Kategoricontroller extends Controller
         $request->validate(
             [
                 'kategori' => 'required',
-                'ketersediaan' => 'required',
-                'jumlah' => 'required',
             ]
         );
 
         $kategoris = new Kategori;
         $kategoris->kategori = $request['kategori'];
-        $kategoris->ketersediaan = $request['ketersediaan'];
-        $kategoris->jumlah = $request['jumlah'];
         $kategoris->save();
 
         return redirect('/kategori');
@@ -59,8 +59,9 @@ class Kategoricontroller extends Controller
      */
     public function edit(string $id)
     {
+        $user = Auth::user();
         $Kategori = Kategori::find($id);
-        return view('admin.kategori.editkategori', compact('Kategori'));
+        return view('admin.kategori.editkategori', compact('Kategori', 'user'));
     }
 
     /**
@@ -71,15 +72,11 @@ class Kategoricontroller extends Controller
         $request->validate(
             [
                 'kategori' => 'required',
-                'ketersediaan' => 'required',
-                'jumlah' => 'required',
             ]
         );
 
         $kategoris = Kategori::find($id);
         $kategoris->kategori = $request['kategori'];
-        $kategoris->ketersediaan = $request['ketersediaan'];
-        $kategoris->jumlah = $request['jumlah'];
         $kategoris->save();
 
         return redirect('/kategori');

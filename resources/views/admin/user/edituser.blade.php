@@ -1,6 +1,6 @@
 @extends('admin.mainapps')
 @section('title')
-    EDIT USER
+    Edit User
 @endsection
 @section('content')
     <section id="user">
@@ -25,10 +25,6 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="email"
                                 value="{{ $User->email }}">
-                        </div>
-                        <div class="col-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" value="{{ $User->password }}">
                         </div>
                         <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar</label>

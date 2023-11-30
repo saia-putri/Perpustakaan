@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Buku;
-use App\Models\Kategori;
-use App\Models\User;
 use App\Models\Rak;
+use App\Models\Buku;
+use App\Models\User;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class Bukucontroller extends Controller
@@ -14,10 +15,20 @@ class Bukucontroller extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function dashboard()
+    {
+        $user = Auth::user();
+        $totalbuku = Buku::sum('jumlah');
+        $totalrak = Rak::count();
+        $totalkategori = Kategori::count();
+        $totaluser = User::count();
+        return view('admin.index', compact('totalbuku', 'user', 'totalkategori', 'totaluser', 'totalrak'));
+    }
     public function index()
     {
+        $user = Auth::user();
         $bukus = Buku::all();
-        return view('admin.buku.buku', compact('bukus'));
+        return view('admin.buku.buku', compact('bukus', 'user'));
     }
 
     /**
@@ -25,9 +36,10 @@ class Bukucontroller extends Controller
      */
     public function create()
     {
+        $user = Auth::user();
         $bukus = Kategori::all();
         $raks = Rak::all();
-        return view('admin.buku.createbuku', compact('bukus', 'raks'));
+        return view('admin.buku.createbuku', compact('bukus', 'raks', 'user'));
     }
 
     /**
@@ -42,7 +54,7 @@ class Bukucontroller extends Controller
                 'gambar' => 'mimes:png,jpg,gif|image|max:5048',
                 'pengarang' => 'required',
                 'penerbit' => 'required',
-                'tahun_terbit' => 'required',
+                'tahun_terbit' => 'required|numeric',
                 'jumlah' => 'required',
                 'rak' => 'required',
             ]
@@ -51,11 +63,23 @@ class Bukucontroller extends Controller
         $file = $request->file('gambar');
         $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
 
+        $kategoris = Kategori::findOrFail($request['kategori']);
+        $jumlahBaru = $request['jumlah'];
+        // tambahjumlahbaru
+        $kategoris->jumlahbuku += $jumlahBaru;
+        $kategoris->save();
+
+        $raks = Rak::findOrFail($request['rak']);
+        $jumlahBarur = $request['jumlah'];
+        // tambahjumlahbaru
+        $raks->jumlahdatabuku += $jumlahBarur;
+        $raks->save();
+
         $bukus = new Buku;
         $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
-        $bukus->jumlah = $request['jumlah_buku'];
-        $bukus->raks_id = $request['letak_buku'];
+        $bukus->jumlah = $request['jumlah'];
+        $bukus->raks_id = $request['rak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];
@@ -70,7 +94,9 @@ class Bukucontroller extends Controller
      */
     public function show(string $id)
     {
-        //
+        $user = Auth::user();
+        $buku = Buku::find($id);
+        return view('admin.buku.detailbuku', compact('buku', 'user'));
     }
 
     /**
@@ -78,8 +104,11 @@ class Bukucontroller extends Controller
      */
     public function edit(string $id)
     {
+        $user = Auth::user();
         $bukus = Buku::find($id);
-        return view('admin.buku.editbuku', compact('Buku'));
+        // $ktggg = Kategori::all();
+        // $raks = Rak::all();
+        return view('admin.buku.editbuku', compact('bukus', 'user'));
     }
 
     /**
@@ -89,14 +118,7 @@ class Bukucontroller extends Controller
     {
         $request->validate(
             [
-                'kategori' => 'required',
-                'judul' => 'required',
                 'gambar' => 'mimes:png,jpg,gif|image|max:5048',
-                'pengarang' => 'required',
-                'penerbit' => 'required',
-                'tahun_terbit' => 'required',
-                'jumlah' => 'required',
-                'rak' => 'required',
             ]
         );
 
@@ -111,10 +133,8 @@ class Bukucontroller extends Controller
         }
 
         $bukus = Buku::find($id);
-        $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];
-        $bukus->raks_id = $request['letak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];
@@ -131,5 +151,12 @@ class Bukucontroller extends Controller
     {
         Buku::destroy('id', $id);
         return redirect('/buku');
+    }
+
+
+    public function profil()
+    {
+        $user = Auth::user();
+        return view('admin.profil', compact('user'));
     }
 }

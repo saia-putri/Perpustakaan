@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class Usercontroller extends Controller
 {
@@ -12,8 +15,9 @@ class Usercontroller extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $users = User::all();
-        return view('admin.user.user', compact('users'));
+        return view('admin.user.user', compact('users', 'user'));
     }
 
     /**
@@ -21,7 +25,8 @@ class Usercontroller extends Controller
      */
     public function create()
     {
-        return view('admin.user.createuser');
+        $user = Auth::user();
+        return view('admin.user.createuser', compact('user'));
     }
 
     /**
@@ -40,7 +45,7 @@ class Usercontroller extends Controller
         );
 
         $file = $request->file('gambar');
-        $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
+        $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
 
         $users = new User;
         $users->name = $request['name'];
@@ -66,8 +71,9 @@ class Usercontroller extends Controller
      */
     public function edit(string $id)
     {
+        $user = Auth::user();
         $User = User::find($id);
-        return view('admin.user.edituser', compact('User'));
+        return view('admin.user.edituser', compact('User', 'user'));
     }
 
     /**
@@ -77,23 +83,17 @@ class Usercontroller extends Controller
     {
         $request->validate(
             [
-                'name' => 'required',
-                'jabatan' => 'required',
-                'email' => 'required|unique:users,email',
-                'password' => 'required',
                 'gambar' => 'mimes:png,jpg,jpeg,gif|image|max:2048',
             ]
         );
 
-        if($request->file('gambar'))
-        {
-            if($request->oldImage) {
+        if ($request->file('gambar')) {
+            if ($request->oldImage) {
                 storage::delete($request->oldImage);
             }
             $file = $request->file('gambar');
-            $path = $file->storeAs('uploads', time() .'.'. $request->file('gambar')->extension());
-        }
-        else {
+            $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
+        } else {
             $path = $request->oldImage;
         }
 

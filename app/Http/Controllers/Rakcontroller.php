@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Rak;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class Rakcontroller extends Controller
@@ -12,8 +15,9 @@ class Rakcontroller extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $raks = Rak::all();
-        return view('admin.rak.rak', compact('raks'));
+        return view('admin.rak.rak', compact('raks', 'user'));
     }
 
     /**
@@ -21,7 +25,8 @@ class Rakcontroller extends Controller
      */
     public function create()
     {
-        return view('admin.rak.createrak');
+        $user = Auth::user();
+        return view('admin.rak.createrak', compact('user'));
     }
 
     /**
@@ -32,13 +37,11 @@ class Rakcontroller extends Controller
         $request->validate(
             [
                 'rak' => 'required',
-                'jumlah' => 'required',
             ]
         );
 
         $raks = new Rak;
         $raks->rak = $request['rak'];
-        $raks->jumlah = $request['jumlah'];
         $raks->save();
 
         return redirect('/rak');
@@ -57,8 +60,9 @@ class Rakcontroller extends Controller
      */
     public function edit(string $id)
     {
+        $user = Auth::user();
         $Rak = Rak::find($id);
-        return view('admin.rak.editrak', compact('Rak'));
+        return view('admin.rak.editrak', compact('Rak', 'user'));
     }
 
     /**
@@ -69,13 +73,11 @@ class Rakcontroller extends Controller
         $request->validate(
             [
                 'rak' => 'required',
-                'jumlah' => 'required',
             ]
         );
 
         $Rak = Rak::find($id);
         $Rak->rak = $request['rak'];
-        $Rak->jumlah = $request['jumlah'];
         $Rak->save();
 
         return redirect('/rak');

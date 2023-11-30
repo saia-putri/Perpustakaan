@@ -49,6 +49,9 @@
                             <a class="nav-link" aria-current="page" href="/main">Beranda Depan</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/katalogbuku">Katalog Buku</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/info">Info Perpustakaan</a>
                         </li>
                         <li class="nav-item">
@@ -61,7 +64,7 @@
                             <a class="nav-link" aria-current="page" href="/pustakawan">Pustakawan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/masuk">Masuk Pustakawan</a>
+                            <a class="nav-link" aria-current="page" href="/login">Masuk Pustakawan</a>
                         </li>
                     </ul>
                 </div>
@@ -75,17 +78,20 @@
 
     <!-- ini footer -->
     <footer class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
-        <p class="mb-0 px-3 text-white">&copy; 2023 Company, Inc</p>
-        <ul class="nav col-md-6 justify-content-end">
-            <li class="nav-item"><a href="/main" class="nav-link px-2 ">Beranda Depan</a></li>
-            <li class="nav-item"><a href="https://wa.me/6281234788104" class="nav-link px-2 text-white">WhatsApp</a>
+        <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang</p>
+        <ul class="nav col-md-6 icon justify-content-end">
+            <li class="nav-item"><a href="/main" class="nav-link px-2 "><i class="bi bi-house-door"></i></a></li>
+            <li class="nav-item"><a href="https://dilmil-palembang.go.id/id/" class="nav-link px-2 text-white"><i
+                        class="bi bi-globe2"></i></a></li>
+            <li class="nav-item"><a href="https://wa.me/6281234788104" class="nav-link px-2 text-white"><i
+                        class="bi bi-whatsapp"></i></a>
             </li>
             <li class="nav-item"><a href="https://www.facebook.com/pengadilanmiliter.palembang"
-                    class="nav-link px-2 text-white">Facebook</a></li>
+                    class="nav-link px-2 text-white"><i class="bi bi-facebook"></i></a></li>
             <li class="nav-item"><a href="https://www.instagram.com/dilmil_palembang/"
-                    class="nav-link px-2 text-white">Instagram</a></li>
+                    class="nav-link px-2 text-white"><i class="bi bi-instagram"></i></a></li>
             <li class="nav-item"><a href="https://www.youtube.com/@dilmil104palembang"
-                    class="nav-link px-2 text-white">Youtube</a></li>
+                    class="nav-link px-2 text-white"><i class="bi bi-youtube"></i></a></li>
         </ul>
     </footer>
 
