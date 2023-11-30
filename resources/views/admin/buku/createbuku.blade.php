@@ -50,9 +50,6 @@
                         <div class="mb-3">
                             <label for="gambar_buku" class="form-label">Gambar Buku</label>
                             <input type="file" class="form-control" id="gambar" name="gambar_buku" accept="image/*">
-                            <input type="hidden" name="oldImage" value="">
-                            <img src="" alt="" width="20%" class="img-thumbhnail mt-3" width="30%"
-                                alt="Foto">
                         </div>
                         <div class="text-end">
                             <button type="submit" class="btn bg-btn">post</button>
