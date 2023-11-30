@@ -12,8 +12,7 @@
                         <tr>
                             <th scope="col-md">No</th>
                             <th scope="col-md">Kategori</th>
-                            <th scope="col-md">Ketersediaan</th>
-                            <th scope="col-md">Jumlah</th>
+                            <th scope="col-md">Jumlah Buku</th>
                             <th scope="col-md">Option</th>
                         </tr>
                     </thead>
@@ -22,8 +21,7 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $Kategori->kategori }}</td>
-                                <td>{{ $Kategori->ketersediaan }}</td>
-                                <td>{{ $Kategori->jumlah }}</td>
+                                <td>{{ $Kategori->jumlahbuku }}</td>
                                 <td>
                                     <a href="/editkategori/{{ $Kategori->id }}" class="btn bg-btn"><i
                                             class="bi bi-pencil-square"></i></a>
