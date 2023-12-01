@@ -5,9 +5,9 @@
 @section('content')
     <section>
         <div class="container mb-5 mt-5">
-            <div class="justify-content-end">
+            <div class="justify-content-end table-responsive">
 
-                <table class="table">
+                <table class="table ">
                     <thead>
                         <a href="/createbuku" class="btn bg-btn mb-2">Tambahkan Buku</a>
                         <tr>

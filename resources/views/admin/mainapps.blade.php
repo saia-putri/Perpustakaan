@@ -25,7 +25,7 @@
 
 <body>
     <!-- header -->
-    <nav class="admin navbar-expand-lg bg-dilmil1">
+    <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
         <div class="container-fluid">
             <marquee behavior="" direction="">Perpustakaan Pengadilan Militer I-04 Palembang</marquee>
         </div>
@@ -35,66 +35,66 @@
         <div class="row">
 
             <!-- ini sebelah kiri -->
-            <div class="col-md-3">
-                <div class="d-flex flex-column flex-shrink-0 p-3 bg-dilmil1" style="min-height: 100vh">
+            <div class="col-md-3 col-4 bg-dilmil1">
+                <div class="left-bar">
+                    <div class="d-flex flex-column flex-shrink-0 p-3" style="min-height: 76vh">
 
-                    <div class="dropdown">
-                        <a href="#"
-                            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('storage/' . $user->gambar) }}" alt="" width="32"
-                                height="32" class="rounded-circle me-2">
-                            {{-- <img src="{{ asset('storage/' . $User->gambar) }}" alt="" width="32" height="32"
-                                class="rounded-circle me-2"> --}}
-                            <strong>{{ $user->name }}</strong>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow">
-                            <li><a class="dropdown-item" href="/profil">Profile</a></li>
-                            <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+                        <div class="dropdown">
+                            <a href="#"
+                                class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{{ asset('storage/' . $user->gambar) }}" alt="" width="32"
+                                    height="32" class="rounded-circle me-2">
+                                <strong>{{ $user->name }}</strong>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                                <li><a class="dropdown-item" href="/profil">Profile</a></li>
+                                <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+                            </ul>
+                        </div>
+
+                        <hr>
+                        <ul class="nav nav-pills flex-column mb-auto ">
+                            <li class="nav-item">
+                                <a href="/dashboard" class="nav-link link-body-emphasis" aria-current="page"><i
+                                        class="bi bi-house-door"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/buku" class="nav-link link-body-emphasis"><i class="bi bi-book"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    Buku
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/kategori" class="nav-link link-body-emphasis"><i class="bi bi-bookmark"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    Kategori
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/rak" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    Rak Buku
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/user" class="nav-link link-body-emphasis"><i class="bi bi-person"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    User
+                                </a>
+                            </li>
                         </ul>
+                        <hr>
+
                     </div>
-
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto ">
-                        <li class="nav-item">
-                            <a href="/dashboard" class="nav-link link-body-emphasis" aria-current="page"><i
-                                    class="bi bi-house-door"></i>
-                                <svg class="bi pe-none me-2" width="16" height="16"></svg>
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/buku" class="nav-link link-body-emphasis"><i class="bi bi-book"></i>
-                                <svg class="bi pe-none me-2" width="16" height="16"></svg>
-                                Buku
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/kategori" class="nav-link link-body-emphasis"><i class="bi bi-bookmark"></i>
-                                <svg class="bi pe-none me-2" width="16" height="16"></svg>
-                                Kategori Buku
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/rak" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
-                                <svg class="bi pe-none me-2" width="16" height="16"></svg>
-                                Rak Buku
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/user" class="nav-link link-body-emphasis"><i class="bi bi-person"></i>
-                                <svg class="bi pe-none me-2" width="16" height="16"></svg>
-                                User
-                            </a>
-                        </li>
-                    </ul>
-                    <hr>
-
                 </div>
             </div>
 
             <!-- ini konten -->
-            <div class="col-md-8">
+            <div class="col-md-9 col-8">
                 @yield('content')
             </div>
 

@@ -1,5 +1,6 @@
 :root{
     --warna-bg-primary: #2f5a42;
+    --warna-bg-barui: #50896a;
     --warna-bg-primary1: #ededed;
     --warna-text-primary: #ffffff;
     --color-text-primary: #000000;
@@ -24,7 +25,7 @@
 .bg-dilmil1{
     color: var(--color-text-primarye);
     font-family: var(--font-family3);
-    background-color: var(--warna-bg-primary1);
+    background-color: var(--warna-bg-barui);
 }
 
 .admin{
@@ -118,13 +119,31 @@
 .carousel-item img{
     margin-top: 0.9375em;
 }
-#Pencarian{
+/* #Pencarian{
     background-image: url(img/perpus1.png);
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 32.25em;
+} */
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/perpus1.png);
+    background-size: cover;
+    background-position: left;
+    z-index: -1;
 }
+
+.hero {
+    min-height: 90vh;
+}
+
 .img2{
     background-image: url(img/perpus3.png);
     background-position: center;
@@ -151,4 +170,21 @@
 .katalogbuku{
     margin-bottom: 1.875em;
     font-family: var(--font-family3);
+}
+
+.bg-hijau
+{
+    background-color: var(--warna-bg-primary);
+}
+
+/* media queri */
+/* mobile */
+@media(max-width: 576px) {
+    .left-bar .dropdown ul{
+    }
+
+        html {
+            font-size: 65%;
+        }
+
 }

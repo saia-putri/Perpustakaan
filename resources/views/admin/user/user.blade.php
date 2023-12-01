@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <section id="blog">
-        <div class="container mb-5 mt-5">
+        <div class="container mb-5 mt-5 table-responsive">
 
             <table class="table">
                 <thead>
