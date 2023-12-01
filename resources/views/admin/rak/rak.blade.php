@@ -15,7 +15,7 @@
                         <tr>
                             <th scope="col-md">No</th>
                             <th scope="col-md">Rak</th>
-                            <th scope="col-md">Jumlah Buku</th>
+                            <th scope="col-md">Jumlah</th>
                             <th scope="col-md">Option</th>
                         </tr>
                     </thead>
@@ -24,11 +24,7 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $Rak->rak }}</td>
-<<<<<<< HEAD
                                 <td>{{ $Rak->jumlahdatabuku }} Buku</td>
-=======
-                                <td>{{ $Rak->jumlahdatabuku }}</td>
->>>>>>> aaa96d1cdefec0a218d632ab425825537f8dcaf3
                                 <td>
                                     <a href="/editrak/{{ $Rak->id }}" class="btn bg-btn"><i
                                             class="bi bi-pencil-square"></i></a>

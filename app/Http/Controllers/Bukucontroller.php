@@ -63,6 +63,17 @@ class Bukucontroller extends Controller
         $file = $request->file('gambar');
         $path = $file->storeAs('uploads', time() . '.' . $request->file('gambar')->extension());
 
+        $bukus = new Buku;
+        $bukus->kategoris_id = $request['kategori'];
+        $bukus->judul = $request['judul'];
+        $bukus->jumlah = $request['jumlah'];
+        $bukus->raks_id = $request['rak'];
+        $bukus->pengarang = $request['pengarang'];
+        $bukus->penerbit = $request['penerbit'];
+        $bukus->tahun_terbit = $request['tahun_terbit'];
+        $bukus->gambar = $path;
+        $bukus->save();
+
         $kategoris = Kategori::findOrFail($request['kategori']);
         $jumlahBaru = $request['jumlah'];
         // tambahjumlahbaru
@@ -74,17 +85,6 @@ class Bukucontroller extends Controller
         // tambahjumlahbaru
         $raks->jumlahdatabuku += $jumlahBarur;
         $raks->save();
-
-        $bukus = new Buku;
-        $bukus->kategoris_id = $request['kategori'];
-        $bukus->judul = $request['judul'];
-        $bukus->jumlah = $request['jumlah'];
-        $bukus->raks_id = $request['rak'];
-        $bukus->pengarang = $request['pengarang'];
-        $bukus->penerbit = $request['penerbit'];
-        $bukus->tahun_terbit = $request['tahun_terbit'];
-        $bukus->gambar = $path;
-        $bukus->save();
 
         return redirect('/buku');
     }
