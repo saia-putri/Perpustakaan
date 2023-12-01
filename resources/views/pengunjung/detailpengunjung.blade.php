@@ -45,8 +45,11 @@
                                 <p class="card-text">
                                     Letak Buku : {{ $buku->raks['rak'] }} <br>
                                 </p>
-                                <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04
-                                        Palembang</small></p>
+                                <a href="/katalogbuku">
+                                    <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04
+                                            Palembang</small>
+                                    </p>
+                                </a>
                             </div>
                         </div>
                     </div>
