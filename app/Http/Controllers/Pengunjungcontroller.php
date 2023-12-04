@@ -45,14 +45,6 @@ class Pengunjungcontroller extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function anggota()
-    {
-        return view('pengunjung.anggota');
-    }
-
-    /**
-     * Display a listing of the resource.
-     */
     public function pustakawan()
     {
         $users = User::all();

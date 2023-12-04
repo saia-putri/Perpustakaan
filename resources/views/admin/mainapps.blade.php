@@ -27,7 +27,7 @@
     <!-- header -->
     <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
         <div class="container-fluid">
-            <marquee behavior="" direction="">Perpustakaan Pengadilan Militer I-04 Palembang</marquee>
+            <marquee behavior="" direction="">Selamat Datang Admin Dilmil I-04 Palembang</marquee>
         </div>
     </nav>
 
@@ -54,11 +54,11 @@
                         </div>
 
                         <hr>
-                        <ul class="nav nav-pills flex-column mb-auto ">
+                        <ul class="nav nav-pills flex-column mb-auto">
                             <li class="nav-item">
                                 <a href="/dashboard" class="nav-link link-body-emphasis" aria-current="page"><i
                                         class="bi bi-house-door"></i>
-                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    <svg class="bi pe-none me-2" width="16" height="16" ></svg>
                                     Home
                                 </a>
                             </li>

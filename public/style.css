@@ -27,7 +27,9 @@
     font-family: var(--font-family3);
     background-color: var(--warna-bg-barui);
 }
-
+.mimin{
+    color: var(--color-text-primary1);
+}
 .admin{
     font-family: var(--font-family);
     font-size: 1.5625em;
@@ -56,13 +58,6 @@
 }
 
 /* PENGUNJUNG */
-.delay2{
-    font-family: var(--font-family6);
-}
-.font1{
-    font-size: 1.100em;
-    font-family: var(--font-family5);
-}
 .pengunjung{
     background: rgba(0,0,0, 0.5);
     font-size: 1.125em;
@@ -91,21 +86,15 @@
     margin-left: 30%;
     text-align: center;
 }
-.form2{
-    height: 3.125em;
-    width: 26.25em;
-    border-radius: 1.25em;
-}
-.form3{
-    height: 3.125em;
-    width: 3.125em;
-    border-radius: 0.875em;
-}
 .info{
     font-family: var(--font-family3);
     text-align: justify;
     margin: 0%;
     font-size: 1.0625em;
+}
+.selamat{
+    margin-top: 18%;
+    font-family: var(--font-family9);
 }
 .menu1{
     color: #ffffff;
@@ -171,7 +160,9 @@
     margin-bottom: 1.875em;
     font-family: var(--font-family3);
 }
-
+.rak{
+    margin-left: 38%;
+}
 .bg-hijau
 {
     background-color: var(--warna-bg-primary);

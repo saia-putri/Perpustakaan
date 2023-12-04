@@ -46,7 +46,7 @@
                 <div class="offcanvas-body menu1">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/main">Beranda Depan</a>
+                            <a class="nav-link" aria-current="page" href="/main">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/katalogbuku">Katalog Buku</a>
@@ -56,9 +56,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/lokasi">Lokasi Perpustakaan</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/anggota">Area Anggota</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/pustakawan">Pustakawan</a>
