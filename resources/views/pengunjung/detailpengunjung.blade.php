@@ -40,10 +40,10 @@
                                     Tahun Terbit : {{ $buku->tahun_terbit }} <br>
                                 </p>
                                 <p class="card-text">
-                                    Jumlah Buku : {{ $buku->jumlah }} <br>
+                                    Jumlah Buku : {{ $buku->jumlah }} Buku<br>
                                 </p>
                                 <p class="card-text">
-                                    Letak Buku : {{ $buku->raks['rak'] }} <br>
+                                    Letak Buku : Rak {{ $buku->raks['rak'] }} <br>
                                 </p>
                                 <a href="/katalogbuku">
                                     <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04

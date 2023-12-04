@@ -27,8 +27,8 @@
                                 <td>{{ $buku->kategoris['kategori'] }}</td>
                                 <td width="25%">{{ $buku->judul }}</td>
                                 <td><img src="{{ asset('storage/' . $buku->gambar) }}" width="62.5em" alt=""></td>
-                                <td width="20%">{{ $buku->jumlah }}</td>
-                                <td>{{ $buku->raks['rak'] }}</td>
+                                <td width="20%">{{ $buku->jumlah }} Buku</td>
+                                <td>Rak {{ $buku->raks['rak'] }}</td>
                                 <td>
                                     <a href="/editbuku/{{ $buku->id }}" class="btn bg-btn"><i
                                             class="bi bi-pencil-square"></i></a>

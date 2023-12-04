@@ -30,13 +30,15 @@
                                 Tahun Terbit : {{ $buku->tahun_terbit }} <br>
                             </p>
                             <p class="card-text">
-                                Jumlah Buku : {{ $buku->jumlah }} <br>
+                                Jumlah Buku : {{ $buku->jumlah }} Buku<br>
                             </p>
                             <p class="card-text">
-                                Letak Buku : {{ $buku->raks['rak'] }} <br>
+                                Letak Buku :Rak {{ $buku->raks['rak'] }} <br>
                             </p>
-                            <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04
-                                    Palembang</small></p>
+                            <a href="/buku">
+                                <p class="card-text"><small class="text-body-secondary">Pengadilan Militer I-04
+                                        Palembang</small></p>
+                            </a>
                         </div>
                     </div>
                 </div>

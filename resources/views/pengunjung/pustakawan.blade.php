@@ -33,8 +33,7 @@
                                             <p class="card-text">
                                                 Email : {{ $User->email }}
                                             </p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3
-                                                    mins ago</small>
+                                            <p class="card-text"><small class="text-body-secondary">Pustakawan Dilmil I-04 Palembang</small>
                                             </p>
                                         </div>
                                     </div>
