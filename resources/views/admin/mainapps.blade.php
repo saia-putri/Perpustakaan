@@ -74,12 +74,12 @@
                                     Kategori
                                 </a>
                             </li>
-                            <li>
-                                <a href="/rak" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
+                            {{-- <li>
+                                <a href="/tingkat" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
                                     <svg class="bi pe-none me-2" width="16" height="16"></svg>
                                     Tingkat
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <a href="/rak" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
                                     <svg class="bi pe-none me-2" width="16" height="16"></svg>

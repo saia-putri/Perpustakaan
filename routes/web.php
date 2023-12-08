@@ -7,6 +7,7 @@ use App\Http\Controllers\Rakcontroller;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\Pengunjungcontroller;
 use App\Http\Controllers\Logincontroller;
+use App\Http\Controllers\Tingkatcontroller;
 use App\Http\Controllers\Controller;
 
 
@@ -52,6 +53,9 @@ Route::group(
         Route::get('/editrak/{id}', [Rakcontroller::class, 'edit']);
         Route::put('/updaterak/{id}', [Rakcontroller::class, 'update']);
         Route::get('/deleterak/{id}', [Rakcontroller::class, 'destroy']);
+
+        // TINGKAT
+        Route::get('/tingkat', [Tingkatcontroller::class, 'index']);
 
         // USER
         Route::get('/user', [Usercontroller::class, 'index']);

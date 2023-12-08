@@ -44,6 +44,16 @@
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
+                        {{-- <div class="mb-3">
+                            <label for="telephone" class="form-label">Tahun Terbit</label>
+                            <input type="text" class="form-control @error('telephone') is-invalid @enderror"
+                                id="telephone" name="telephone" placeholder="telephone" value="{{ old('telephone') }}">
+                            <div class="invalid-feedback">
+                                @error('telephone')
+                                    {{ $message }}
+                                @enderror
+                            </div>
+                        </div> --}}
                         <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">

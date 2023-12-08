@@ -20,15 +20,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($raks as $Rak)
+                        @foreach ($tingkats as $Tingkat)
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $Rak->rak }}</td>
-                                <td>{{ $Rak->jumlahdatabuku }} Buku</td>
+                                <td>{{ $Tingkat->rak }}</td>
+                                <td>{{ $Tingkat->jumlahdatabuku }} Buku</td>
                                 <td>
-                                    <a href="/editrak/{{ $Rak->id }}" class="btn bg-btn"><i
+                                    <a href="/edittingkat/{{ $Tingkat->id }}" class="btn bg-btn"><i
                                             class="bi bi-pencil-square"></i></a>
-                                    <a href="/deleterak/{{ $Rak->id }}" class="btn bg-btn"><i
+                                    <a href="/deletetingkat/{{ $Tingkat->id }}" class="btn bg-btn"><i
                                             class="bi bi-trash"></i></a>
                                 </td>
                             </tr>

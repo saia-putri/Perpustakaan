@@ -8,12 +8,12 @@
         <div class="header img2">
         </div>
         <div class="container mt-5">
-            <form class="d-flex mt-3" role="search" action="/search" method="get" autocomplete="off">
+            <form class="form-inline d-flex mt-3" role="search" action="/search" method="GET" autocomplete="off">
                 <div class="marquee down">
                     <div class="row">
                         <div class="col">
                             <input class="form-control form2" type="search" placeholder="Search" aria-label="Search"
-                                type="text" class="s-search animated fadeInUp delay4" id="keyword" name="keywords"
+                                type="search" class="s-search animated fadeInUp delay4" id="search" name="search"
                                 value="" lang="id_ID" aria-hidden="true" autocomplete="off">
                         </div>
                         <div class="col">
