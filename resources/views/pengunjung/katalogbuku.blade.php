@@ -27,7 +27,7 @@
     </section>
     <!--  -->
     <section>
-        <div class="container mb-5 mt-3">
+        <div class="container mb-4 mt-3">
             <div class="row">
                 <div class="col-md-9">
                     <div class="card">

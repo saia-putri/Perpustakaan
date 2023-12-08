@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('kategoris_id')->constrained();
             $table->foreignId('raks_id')->constrained();
-            $table->foreignId('tingkats_id')->constrained();
             $table->text('judul', 100);
             $table->string('gambar', 100);
             $table->string('jumlah');
