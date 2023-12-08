@@ -25,11 +25,11 @@
 
 <body>
     <!-- header -->
-    <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
+    {{-- <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
         <div class="container-fluid">
             <marquee behavior="" direction="">Selamat Datang Admin Dilmil I-04 Palembang</marquee>
         </div>
-    </nav>
+    </nav> --}}
 
     <div class="colomn">
         <div class="row">
@@ -54,11 +54,11 @@
                         </div>
 
                         <hr>
-                        <ul class="nav nav-pills flex-column mb-auto">
+                        <ul class="nav nav-pills flex-column mb-auto ">
                             <li class="nav-item">
                                 <a href="/dashboard" class="nav-link link-body-emphasis" aria-current="page"><i
                                         class="bi bi-house-door"></i>
-                                    <svg class="bi pe-none me-2" width="16" height="16" ></svg>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
                                     Home
                                 </a>
                             </li>
@@ -72,6 +72,12 @@
                                 <a href="/kategori" class="nav-link link-body-emphasis"><i class="bi bi-bookmark"></i>
                                     <svg class="bi pe-none me-2" width="16" height="16"></svg>
                                     Kategori
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/rak" class="nav-link link-body-emphasis"><i class="bi bi-hdd-rack"></i>
+                                    <svg class="bi pe-none me-2" width="16" height="16"></svg>
+                                    Tingkat
                                 </a>
                             </li>
                             <li>
@@ -102,8 +108,8 @@
 
             <!-- ini footer -->
             <footer
-                class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
-                <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang</p>
+                class=" menu1 d-flex flex-wrap bg-dilmil1 justify-content-between align-items-center py-3 border-top">
+                <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang - Presented by PalComTech</p>
                 <ul class="nav col-md-6 icon justify-content-end">
                     <li class="nav-item"><a href="/dashboard" class="nav-link px-2 "><i
                                 class="bi bi-house-door"></i></a>

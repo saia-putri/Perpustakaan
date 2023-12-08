@@ -75,7 +75,7 @@
 
     <!-- ini footer -->
     <footer class=" menu1 d-flex flex-wrap bg-dilmil justify-content-between align-items-center py-3 border-top">
-        <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang</p>
+        <p class="mb-0 px-2 text-white">&copy; Pengadilan Militer I-04 Palembang - Presented by PalComTech</p>
         <ul class="nav col-md-6 icon justify-content-end">
             <li class="nav-item"><a href="/main" class="nav-link px-2 "><i class="bi bi-house-door"></i></a></li>
             <li class="nav-item"><a href="https://dilmil-palembang.go.id/id/" class="nav-link px-2 text-white"><i

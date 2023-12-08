@@ -15,9 +15,8 @@
                         <div class="mb-3">
                             <label for="kategori" class="form-label">Kategori Buku</label>
                             {{-- <select id="kategori" name="kategori" class="form-control">
-                                @foreach ($ktggg as $ktgr)
-                                    <option value="{{ $ktgr->kategoris_id }}">{{ $ktgr->kategoris['kategori'] }}
-                                    </option>
+                                @foreach ($bukus as $buku)
+                                    <option value="{{ $bukus->kategoris['kategori'] }}">{{ $bukus->id }}</option>
                                 @endforeach
                             </select> --}}
                             <input type="text" class="form-control" id="kategori"
@@ -50,8 +49,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="letak" class="form-label">Letak Buku</label>
-                            <input type="text" class="form-control" id="letak"
-                                value="{{ $bukus->raks['rak']}}" disabled>
+                            <input type="text" class="form-control" id="letak" value="{{ $bukus->raks['rak'] }}"
+                                disabled>
                         </div>
                         <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar Buku</label>

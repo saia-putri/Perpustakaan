@@ -77,6 +77,26 @@
                                 @endforeach
                             </select>
                         </div>
+                        {{-- <div class="mb-3">
+                            <label for="tingkat" class="form-label">Tingkat</label>
+                            <input type="text" class="form-control @error('tingkat') is-invalid @enderror" id="tingkat"
+                                name="tingkat" placeholder="tingkat" value="{{ old('tinkat') }}">
+                            <div class="invalid-feedback">
+                                @error('tingkat')
+                                    {{ $message }}
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="sebelah" class="form-label">Sebelah</label>
+                            <input type="text" class="form-control @error('sebelah') is-invalid @enderror" id="sebelah"
+                                name="sebelah" placeholder="sebelah" value="{{ old('sebelah') }}">
+                            <div class="invalid-feedback">
+                                @error('sebelah')
+                                    {{ $message }}
+                                @enderror
+                            </div>
+                        </div> --}}
                         <div class="mb-3">
                             <label for="gambar" class="form-label">Gambar Buku</label>
                             <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*">
