@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('judul', 100);
             $table->string('gambar', 100);
             $table->string('jumlah');
+            $table->string('tingkat');
             $table->text('pengarang');
             $table->text('penerbit');
             $table->string('tahun_terbit');

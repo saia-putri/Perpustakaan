@@ -56,6 +56,7 @@ class Bukucontroller extends Controller
                 'penerbit' => 'required',
                 'tahun_terbit' => 'required|numeric',
                 'jumlah' => 'required',
+                'tingkat' => 'required',
                 'rak' => 'required',
             ]
         );
@@ -67,6 +68,7 @@ class Bukucontroller extends Controller
         $bukus->kategoris_id = $request['kategori'];
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];
+        $bukus->tingkat = $request['tingkat'];
         $bukus->raks_id = $request['rak'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
@@ -135,6 +137,7 @@ class Bukucontroller extends Controller
         $bukus = Buku::find($id);
         $bukus->judul = $request['judul'];
         $bukus->jumlah = $request['jumlah'];
+        $bukus->tingkat = $request['tingkat'];
         $bukus->pengarang = $request['pengarang'];
         $bukus->penerbit = $request['penerbit'];
         $bukus->tahun_terbit = $request['tahun_terbit'];

@@ -43,6 +43,9 @@
                                     Jumlah Buku : {{ $buku->jumlah }} Buku<br>
                                 </p>
                                 <p class="card-text">
+                                    Tingkat Buku : Tingkat {{ $buku->tingkat }} <br>
+                                </p>
+                                <p class="card-text">
                                     Letak Buku : Rak {{ $buku->raks['rak'] }} <br>
                                 </p>
                                 <a href="/katalogbuku">
