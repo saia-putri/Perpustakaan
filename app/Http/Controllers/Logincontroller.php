@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
-class Logincontroller extends Controller
+class LoginController extends Controller
 {
     public function index()
     {

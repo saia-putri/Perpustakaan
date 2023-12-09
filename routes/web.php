@@ -54,9 +54,6 @@ Route::group(
         Route::put('/updaterak/{id}', [Rakcontroller::class, 'update']);
         Route::get('/deleterak/{id}', [Rakcontroller::class, 'destroy']);
 
-        // TINGKAT
-        Route::get('/tingkat', [Tingkatcontroller::class, 'index']);
-
         // USER
         Route::get('/user', [Usercontroller::class, 'index']);
         Route::get('/createuser', [Usercontroller::class, 'create']);
