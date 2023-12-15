@@ -32,9 +32,9 @@
                             <p class="card-text">
                                 Jumlah Buku : {{ $buku->jumlah }} Buku<br>
                             </p>
-                            <p class="card-text">
+                            {{-- <p class="card-text">
                                 Tingkat Buku : Tingkat {{ $buku->tingkat }} <br>
-                            </p>
+                            </p> --}}
                             <p class="card-text">
                                 Letak Buku :Rak {{ $buku->raks['rak'] }} <br>
                             </p>

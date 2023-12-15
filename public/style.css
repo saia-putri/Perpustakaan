@@ -94,8 +94,23 @@
     font-size: 1.0625em;
 }
 .selamat{
-    margin-top: 18%;
+    margin-top: 20%;
     font-family: var(--font-family9);
+    text-align: center;
+}
+.pm{
+    margin-top: 8%;
+}
+.pm h5{
+    font-size: 92%;
+    margin-top: 4%;
+    font-family: var(--font-family9);
+    color: var(--color-text-primary1);
+}
+.pm p{
+    font-size: 80%;
+    font-family: var(--font-family9);
+    color: var(--color-text-primary1);
 }
 .menu1{
     color: #ffffff;

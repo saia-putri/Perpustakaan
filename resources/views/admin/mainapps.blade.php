@@ -25,11 +25,11 @@
 
 <body>
     <!-- header -->
-    {{-- <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
+    <nav class="admin bg-hijau text-white navbar-expand-lg bg-dilmil1">
         <div class="container-fluid">
             <marquee behavior="" direction="">Selamat Datang Admin Dilmil I-04 Palembang</marquee>
         </div>
-    </nav> --}}
+    </nav>
 
     <div class="colomn">
         <div class="row">

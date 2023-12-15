@@ -47,11 +47,11 @@
                             <input type="text" class="form-control" id="jumlah" name="jumlah"
                                 value="{{ $bukus->jumlah }}">
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="tingkat" class="form-label">Tingkat Buku</label>
                             <input type="text" class="form-control" id="tingkat" name="tingkat"
                                 value="{{ $bukus->tingkat }}">
-                        </div>
+                        </div> --}}
                         <div class="mb-3">
                             <label for="letak" class="form-label">Letak Buku</label>
                             <input type="text" class="form-control" id="letak" value="{{ $bukus->raks['rak'] }}"
