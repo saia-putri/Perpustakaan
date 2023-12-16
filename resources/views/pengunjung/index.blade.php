@@ -3,11 +3,11 @@
     Home Pengunjung
 @endsection
 @section('content')
-    <section id="hero">
+    <section id="hero" class=" p-3 justify-content-center align-items-center d-flex">
         <div class="container">
             <div class="pm">
                 <div class="row">
-                    <div class="col-md-1">
+                    <div class="logo col-md-1">
                         <img src="img/logo.png" alt="" width="90px">
                     </div>
                     <div class="col-md-9">
