@@ -63,7 +63,7 @@
 
                     </div>
                 </div>
-                <div class="col-3 info">
+                <div class="col-md-3 info">
                     <h4 class="card-header">INFORMASI</h4>
                     <hr>
                     <p>Akses Katalog Publik Daring - Gunakan fasilitas pencarian untuk mempercepat penemuan data katalog</p>
