@@ -5,6 +5,7 @@
     --warna-text-primary: #ffffff;
     --color-text-primary: #000000;
     --color-text-primary1: #ffffff;
+    --color-text-primary2: #f8b72b;
     --warna-bg: rgb(255, 255, 255);    
     --warna-bg-btn: #FFD700;
     --warna-bg-btn1: #ffffff;
@@ -104,7 +105,7 @@
     font-size: 100%;
     margin-top: 4%;
     font-family: var(--font-family9);
-    color: var(--color-text-primary1);
+    color: var(--color-text-primary2);
 }
 .logo{
     margin-right: 1%;
@@ -112,7 +113,7 @@
 .pm p{
     font-size: 80%;
     font-family: var(--font-family9);
-    color: var(--color-text-primary1);
+    color: var(--color-text-primary2);
 }
 .menu1{
     color: #ffffff;
